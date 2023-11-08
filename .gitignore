@@ -84,3 +84,12 @@
 !*.elf
 !*.bmm
 !*.xmp
+*.xml
+*.rpt
+*.pb
+*.dcp
+*.tcl
+*.jou
+*.txt
+*.vds
+*.vdi
