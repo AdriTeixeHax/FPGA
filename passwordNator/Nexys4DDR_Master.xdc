@@ -4,7 +4,7 @@
 ## - rename the used ports (in each line, after get_ports) according to the top level signal names in the project
 
 ## Clock signal
-#set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { CLK100MHZ }]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
+set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { CLK }]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
 #create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports {CLK100MHZ}];
 
 
@@ -268,11 +268,11 @@ set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
 set_property BITSTREAM.CONFIG.CONFIGRATE 33 [current_design]
 set_property BITSTREAM.CONFIG.PERSIST YES [current_design]
 set_property CONFIG_MODE SPIx4 [current_design]
-set_property IOSTANDARD LVCMOS33 [get_ports {e7[4]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {e7[3]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {e7[2]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {e7[1]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {e7[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {temporal_delete_after_use[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {temporal_delete_after_use[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {temporal_delete_after_use[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {temporal_delete_after_use[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {temporal_delete_after_use[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {s7[6]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {s7[5]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {s7[4]}]
@@ -287,11 +287,11 @@ set_property PACKAGE_PIN K13 [get_ports {s7[3]}]
 set_property PACKAGE_PIN P15 [get_ports {s7[4]}]
 set_property PACKAGE_PIN T11 [get_ports {s7[5]}]
 set_property PACKAGE_PIN L18 [get_ports {s7[6]}]
-set_property PACKAGE_PIN V10 [get_ports {e7[4]}]
-set_property PACKAGE_PIN U11 [get_ports {e7[3]}]
-set_property PACKAGE_PIN U12 [get_ports {e7[2]}]
-set_property PACKAGE_PIN H6 [get_ports {e7[1]}]
-set_property PACKAGE_PIN T13 [get_ports {e7[0]}]
+set_property PACKAGE_PIN V10 [get_ports {temporal_delete_after_use[4]}]
+set_property PACKAGE_PIN U11 [get_ports {temporal_delete_after_use[3]}]
+set_property PACKAGE_PIN U12 [get_ports {temporal_delete_after_use[2]}]
+set_property PACKAGE_PIN H6 [get_ports {temporal_delete_after_use[1]}]
+set_property PACKAGE_PIN T13 [get_ports {temporal_delete_after_use[0]}]
 
 set_property IOSTANDARD LVCMOS33 [get_ports {t7[7]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {t7[6]}]
