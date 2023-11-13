@@ -15,9 +15,9 @@ use work.ARRAY_IN_VHDL.all;
 entity DISPLAY_MUX is
 
     generic(
-        NUM_DISPLAYS: positive := 8;
-        LED_CODE_SIZE: positive := 5;
-        DISPLAY_CHANGE_CLK_DIVIDER: positive := 1000000 -- 10 ms
+        NUM_DISPLAYS: positive;
+        LED_CODE_SIZE: positive;
+        DISPLAY_CHANGE_CLK_DIVIDER: positive
     );
     
     port(
@@ -33,11 +33,11 @@ architecture BEHAVOURAL of DISPLAY_MUX is
 begin
     process (CLK)
     variable COUNT: natural range 0 to DISPLAY_CHANGE_CLK_DIVIDER := 0;
-    variable DISPLAY_IN_USE_VAR: natural range 0 to NUM_DISPLAYS - 1 := 0;
+    variable DISPLAY_IN_USE_VAR: natural range 0 to NUM_DISPLAYS := 0;
     begin
         if rising_edge(CLK) then
             if COUNT = DISPLAY_CHANGE_CLK_DIVIDER then
-                if DISPLAY_IN_USE_VAR = NUM_DISPLAYS - 1 then
+                if DISPLAY_IN_USE_VAR = NUM_DISPLAYS then
                     DISPLAY_IN_USE_VAR := 0;
                 else
                     DISPLAY_IN_USE_VAR := DISPLAY_IN_USE_VAR + 1;

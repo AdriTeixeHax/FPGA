@@ -7,13 +7,13 @@ entity top is
         BLINK_CLK_DIVIDER: positive := 50000000;
         LED_CODE_SIZE: positive := 5;
         NUM_DISPLAYS: positive := 8;
-        DISPLAY_CHANGE_CLK_DIVIDER: positive := 1000000 -- 10 ms
+        DISPLAY_CHANGE_CLK_DIVIDER: positive := 100000 -- 10 ms
     );
  Port(
         CLK: in std_logic;
         s7: out std_logic_vector (6 downto 0);
-        temporal_delete_after_use: in std_logic_vector (4 downto 0);
-        t7: out std_logic_vector (7 downto 0)
+        temporal_delete_after_use: in std_logic_vector (LED_CODE_SIZE - 1 downto 0);
+        t7: out std_logic_vector (NUM_DISPLAYS - 1 downto 0)
     );
 end top;
 
@@ -21,7 +21,7 @@ architecture Behavioral of top is
     component Decoder7 is
     Port(
         s7: out std_logic_vector (6 downto 0);
-        e7: in std_logic_vector (4 downto 0)
+        e7: in std_logic_vector (LED_CODE_SIZE - 1 downto 0)
     
     );
     end component;
@@ -39,6 +39,25 @@ architecture Behavioral of top is
         DISPLAYS_TO_BLINK: in std_logic_vector(NUM_DISPLAYS - 1 downto 0);
         DISPLAY_SELECTED: in natural range 0 to NUM_DISPLAYS - 1;
         LED_CODE_OUT: out std_logic_vector(LED_CODE_SIZE - 1 downto 0)
+    );
+    end component;
+    
+    component selector is
+    generic (
+        num_displays: positive; 
+        led_code_size: positive
+    );
+
+    port(
+        reset: in std_logic;
+        clk:   in std_logic;
+        up:    in std_logic;
+        down:  in std_logic;
+        left:  in std_logic;
+        right: in std_logic;
+        
+        led_code_out: out T_DISPLAY_CODES_IN(num_displays - 1 downto 0);
+        display_selected: out std_logic_vector(num_displays - 1 downto 0)
     );
     end component;
     
@@ -60,11 +79,18 @@ architecture Behavioral of top is
     signal Blinker_to_decoder: std_logic_vector (4 downto 0);
     signal Mux_to_blinker_led_code: std_logic_vector (4 downto 0);
     signal Mux_to_blinker_display:  natural range 0 to NUM_DISPLAYS - 1;
-    signal sexo: T_DISPLAY_CODES_IN (0 to NUM_DISPLAYS - 1);
+    signal sexo: T_DISPLAY_CODES_IN (NUM_DISPLAYS - 1 downto 0);
     
 begin
-     sexo<=(others => (others=>'0'));
-
+    sexo(0)<="00001";
+    sexo(1)<="00001"; 
+    sexo(2)<="00010"; 
+    sexo(3)<="00010"; 
+    sexo(4)<="00001"; 
+    sexo(5)<="00001"; 
+    sexo(6)<="00010"; 
+    sexo(7)<="00001"; 
+     
     Deocoder7_inst: Decoder7
     port map( 
         s7=>s7,
@@ -80,9 +106,27 @@ begin
     port map( 
         CLK => CLK,
         LED_CODE_IN => Mux_to_blinker_led_code,
-        DISPLAYS_TO_BLINK => "01011010",
+        DISPLAYS_TO_BLINK => "01011110",
         DISPLAY_SELECTED => Mux_to_blinker_display,
         LED_CODE_OUT => Blinker_to_decoder
+    );
+    
+    SELECTOR_inst : SELECTOR
+    generic map(
+        num_displays => NUM_DISPLAYS,
+        led_code_size => LED_CODE_SIZE
+    )
+    
+    port map(
+        reset => '1',
+        clk   => CLK,
+        up    => '0',
+        down  => '0',
+        left  => '0',
+        right => '0',
+        
+        led_code_out => AUX,
+        display_selected => DISPLAYS_TO_BLINK
     );
     
     DISPLAY_MUX_inst: DISPLAY_MUX
@@ -101,14 +145,14 @@ begin
     
     
     
-    t7 <= "00000001" when Mux_to_blinker_display = 0 else
-           "00000010" when Mux_to_blinker_display = 1 else
-           "00000100" when Mux_to_blinker_display = 2 else
-           "00001000" when Mux_to_blinker_display = 3 else
-           "00010000" when Mux_to_blinker_display = 4 else
-           "00100000" when Mux_to_blinker_display = 5 else
-           "01000000" when Mux_to_blinker_display = 6 else
-           "10000000" when Mux_to_blinker_display = 7;
-    
+    t7 <= not "00000001" when Mux_to_blinker_display = 0 else
+          not "00000010" when Mux_to_blinker_display = 1 else
+          not "00000100" when Mux_to_blinker_display = 2 else
+          not "00001000" when Mux_to_blinker_display = 3 else
+          not "00010000" when Mux_to_blinker_display = 4 else
+          not "00100000" when Mux_to_blinker_display = 5 else
+          not "01000000" when Mux_to_blinker_display = 6 else
+          not "10000000" when Mux_to_blinker_display = 7;
+
   
 end Behavioral;
