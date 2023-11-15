@@ -7,11 +7,18 @@ entity top is
         BLINK_CLK_DIVIDER: positive := 50000000;
         LED_CODE_SIZE: positive := 5;
         NUM_DISPLAYS: positive := 8;
-        DISPLAY_CHANGE_CLK_DIVIDER: positive := 100000 -- 10 ms
+        DISPLAY_CHANGE_CLK_DIVIDER: positive := 100000 -- 1 ms
     );
  Port(
         CLK: in std_logic;
+        OK_B: in std_logic;
+        UP_B: in std_logic;
+        DOWN_B: in std_logic;
+        LEFT_B: in std_logic;
+        RIGHT_B: in std_logic;
+        RESET: in std_logic;
         s7: out std_logic_vector (6 downto 0);
+        DOT: out std_logic;
         temporal_delete_after_use: in std_logic_vector (LED_CODE_SIZE - 1 downto 0);
         t7: out std_logic_vector (NUM_DISPLAYS - 1 downto 0)
     );
@@ -42,25 +49,6 @@ architecture Behavioral of top is
     );
     end component;
     
-    component selector is
-    generic (
-        num_displays: positive; 
-        led_code_size: positive
-    );
-
-    port(
-        reset: in std_logic;
-        clk:   in std_logic;
-        up:    in std_logic;
-        down:  in std_logic;
-        left:  in std_logic;
-        right: in std_logic;
-        
-        led_code_out: out T_DISPLAY_CODES_IN(num_displays - 1 downto 0);
-        display_selected: out std_logic_vector(num_displays - 1 downto 0)
-    );
-    end component;
-    
     component DISPLAY_MUX is
     generic(
         NUM_DISPLAYS: positive;
@@ -76,20 +64,69 @@ architecture Behavioral of top is
     );
     end component;
     
+    component the_machine_of_the_state
+        generic(
+            NUM_DISPLAYS: positive;
+            LED_CODE_SIZE: positive
+        );
+        Port ( 
+            Reset: in std_logic;
+            CLK:  in std_logic ;
+            OK_B: in std_logic;
+            UP: in std_logic;
+            DOWN: in std_logic;
+            LEFT: in std_logic;
+            RIGHT: in std_logic;
+            DISPLAYS_TO_BLINK: out std_logic_vector(NUM_DISPLAYS - 1 downto 0);
+            DISPLAY_CODES_IN: out T_DISPLAY_CODES_IN (0 to NUM_DISPLAYS - 1) );
+    end component;
+    
+    component Transistor_mux
+        generic (
+            num_displays: positive
+        );
+        Port (
+               Mux_to_blinker_display:  natural range 0 to NUM_DISPLAYS - 1;
+               t7: out std_logic_vector (NUM_DISPLAYS - 1 downto 0));    
+    end component;
+    
+    component SYNC_BUTTON is
+    port(
+        CLK: in std_logic;
+        ASYNC_IN: in std_logic;
+        SYNC_OUT: out std_logic
+    );
+    end component;
+    
     signal Blinker_to_decoder: std_logic_vector (4 downto 0);
     signal Mux_to_blinker_led_code: std_logic_vector (4 downto 0);
     signal Mux_to_blinker_display:  natural range 0 to NUM_DISPLAYS - 1;
-    signal sexo: T_DISPLAY_CODES_IN (NUM_DISPLAYS - 1 downto 0);
-    
+    signal fsm_to_blinker_displays_to_blink: std_logic_vector(NUM_DISPLAYS - 1 downto 0);
+    signal fsm_to_mux_displays_codes_in: T_DISPLAY_CODES_IN (0 to NUM_DISPLAYS - 1);
+    signal OK_B_SIGNAL: std_logic;
+    signal UP_B_SIGNAL: std_logic;
+    signal DOWN_B_SIGNAL: std_logic;
+    signal LEFT_B_SIGNAL: std_logic;
+    signal RIGHT_B_SIGNAL: std_logic;
 begin
-    sexo(0)<="00001";
-    sexo(1)<="00001"; 
-    sexo(2)<="00010"; 
-    sexo(3)<="00010"; 
-    sexo(4)<="00001"; 
-    sexo(5)<="00001"; 
-    sexo(6)<="00010"; 
-    sexo(7)<="00001"; 
+    DOT <= '1';
+    fsm_inst:  the_machine_of_the_state
+    generic map(
+        NUM_DISPLAYS => NUM_DISPLAYS,
+        LED_CODE_SIZE => LED_CODE_SIZE
+    )
+    port map( 
+         Reset  => RESET,
+         CLK    =>  CLK,
+         OK_B   =>  OK_B_SIGNAL,
+         UP => UP_B_SIGNAL,
+         DOWN => DOWN_B_SIGNAL,
+         LEFT => LEFT_B_SIGNAL,
+         RIGHT => RIGHT_B_SIGNAL,
+         DISPLAYS_TO_BLINK  =>  fsm_to_blinker_displays_to_blink,
+         DISPLAY_CODES_IN   =>  fsm_to_mux_displays_codes_in
+    );
+     
      
     Deocoder7_inst: Decoder7
     port map( 
@@ -106,29 +143,11 @@ begin
     port map( 
         CLK => CLK,
         LED_CODE_IN => Mux_to_blinker_led_code,
-        DISPLAYS_TO_BLINK => "01011110",
+        DISPLAYS_TO_BLINK => fsm_to_blinker_displays_to_blink,
         DISPLAY_SELECTED => Mux_to_blinker_display,
         LED_CODE_OUT => Blinker_to_decoder
     );
-    
-    SELECTOR_inst : SELECTOR
-    generic map(
-        num_displays => NUM_DISPLAYS,
-        led_code_size => LED_CODE_SIZE
-    )
-    
-    port map(
-        reset => '1',
-        clk   => CLK,
-        up    => '0',
-        down  => '0',
-        left  => '0',
-        right => '0',
-        
-        led_code_out => AUX,
-        display_selected => DISPLAYS_TO_BLINK
-    );
-    
+
     DISPLAY_MUX_inst: DISPLAY_MUX
     generic map(
         DISPLAY_CHANGE_CLK_DIVIDER => DISPLAY_CHANGE_CLK_DIVIDER,
@@ -138,21 +157,53 @@ begin
     
     port map(
         CLK => CLK,
-        DISPLAY_CODES_IN => sexo,
+        DISPLAY_CODES_IN => fsm_to_mux_displays_codes_in,
         DISPLAY_CODE_OUT => Mux_to_blinker_led_code,
         DISPLAY_IN_USE=> Mux_to_blinker_display 
     );
     
+    Transistor_mux_inst: Transistor_mux
+    generic map(
+         NUM_DISPLAYS => NUM_DISPLAYS
+    )
+    port map(
+         Mux_to_blinker_display =>Mux_to_blinker_display,
+         t7=>t7
+    );
     
+    OK_BTN_INST: SYNC_BUTTON
+    port map(
+        CLK => CLK,
+        ASYNC_IN => OK_B,
+        SYNC_OUT => OK_B_SIGNAL
+    );
     
-    t7 <= not "00000001" when Mux_to_blinker_display = 0 else
-          not "00000010" when Mux_to_blinker_display = 1 else
-          not "00000100" when Mux_to_blinker_display = 2 else
-          not "00001000" when Mux_to_blinker_display = 3 else
-          not "00010000" when Mux_to_blinker_display = 4 else
-          not "00100000" when Mux_to_blinker_display = 5 else
-          not "01000000" when Mux_to_blinker_display = 6 else
-          not "10000000" when Mux_to_blinker_display = 7;
-
+    UP_BTN_INST: SYNC_BUTTON
+    port map(
+        CLK => CLK,
+        ASYNC_IN => UP_B,
+        SYNC_OUT => UP_B_SIGNAL
+    );
+    
+    DOWN_BTN_INST: SYNC_BUTTON
+    port map(
+        CLK => CLK,
+        ASYNC_IN => DOWN_B,
+        SYNC_OUT => DOWN_B_SIGNAL
+    );
+    
+    LEFT_BTN_INST: SYNC_BUTTON
+    port map(
+        CLK => CLK,
+        ASYNC_IN => LEFT_B,
+        SYNC_OUT => LEFT_B_SIGNAL
+    );
+    
+    RIGHT_BTN_INST: SYNC_BUTTON
+    port map(
+        CLK => CLK,
+        ASYNC_IN => RIGHT_B,
+        SYNC_OUT => RIGHT_B_SIGNAL
+    );
   
 end Behavioral;

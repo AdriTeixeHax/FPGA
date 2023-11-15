@@ -1,14 +1,14 @@
 #-----------------------------------------------------------
-# Vivado v2023.1.1 (64-bit)
-# SW Build 3900603 on Fri Jun 16 19:31:24 MDT 2023
-# IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
-# SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
-# Start of session at: Mon Nov 13 17:51:50 2023
-# Process ID: 21740
-# Current directory: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Nov 15 18:08:10 2023
+# Process ID: 17620
+# Current directory: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/top.vds
-# Journal file: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1\vivado.jou
-# Running On: LAPTOP-1917, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 8, Host memory: 32078 MB
+# Log file: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/top.vds
+# Journal file: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1\vivado.jou
+# Running On: DESKTOP-PBHAH2K, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 4, Host memory: 17009 MB
 #-----------------------------------------------------------
 source top.tcl -notrace
