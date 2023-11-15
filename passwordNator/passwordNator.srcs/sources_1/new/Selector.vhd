@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 package ARRAY_INT is
-    type T_STATE_MEMORY is array (natural range <>) of natural range 0 to 9;
+    type T_STATE_MEMORY is array (integer range <>) of integer;
 end;   
 
 
@@ -11,6 +11,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.ARRAY_INT.all;
 use work.ARRAY_IN_VHDL.all;
+use ieee.std_logic_arith.all;
 
 entity selector is
     generic (
@@ -37,7 +38,7 @@ architecture behav of selector is
 begin
 
     process(reset, clk)
-        variable led_code_aux: T_STATE_MEMORY(led_code_size - 1 downto 0);
+        variable led_code_aux: T_STATE_MEMORY(num_displays - 1 downto 0);
         variable display_aux:  natural range num_displays - 1 downto 0;
         variable natural_code: Natural  range  0 to 99999999;
     begin
@@ -83,7 +84,7 @@ begin
         end if;
 
         for i in 0 to NUM_DISPLAYS - 1 loop
-            led_code_out(i) <= std_logic_vector(to_unsigned(led_code_aux(i), led_code_out'length));
+             led_code_out(i)<= conv_std_logic_vector(led_code_aux(i), 5);
             natural_code    :=  natural_code+led_code_aux(i)*10**i;
         end loop;
         

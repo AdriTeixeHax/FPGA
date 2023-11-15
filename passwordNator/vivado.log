@@ -3,22 +3,43 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Nov 15 16:15:26 2023
-# Process ID: 352
-# Current directory: C:/Users/Rubikrazy/Desktop/passwordNator
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22200 C:\Users\Rubikrazy\Desktop\passwordNator\passwordNator.xpr
-# Log file: C:/Users/Rubikrazy/Desktop/passwordNator/vivado.log
-# Journal file: C:/Users/Rubikrazy/Desktop/passwordNator\vivado.jou
-# Running On: DESKTOP-PBHAH2K, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 4, Host memory: 17009 MB
+# Start of session at: Wed Nov 15 22:28:14 2023
+# Process ID: 29324
+# Current directory: C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28256 C:\Users\bogurad\Desktop\Proyectos gitHub\FPGA\passwordNator\passwordNator.xpr
+# Log file: C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/vivado.log
+# Journal file: C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator\vivado.jou
+# Running On: DESKTOP-MOPDCTP, OS: Windows, CPU Frequency: 3800 MHz, CPU Physical cores: 16, Host memory: 34240 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.xpr
+open_project {C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.xpr}
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-50:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/arty-s7-50/B.0/board.xml as part xc7s50csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-z7-10:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/arty-z7-10/A.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-z7-20:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/arty-z7-20/A.0/board.xml as part xc7z020clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cmod-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/cmod-s7-25/B.0/board.xml as part xc7s25csga225-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cora-z7-07s:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/cora-z7-07s/B.0/board.xml as part xc7z007sclg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cora-z7-10:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/cora-z7-10/B.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:eclypse-z7:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/eclypse-z7/A.0/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:eclypse-z7:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/eclypse-z7/B.0/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:gzu_3eg:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/genesys-zu-3eg/B.0/board.xml as part xczu3eg-sfvc784-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:gzu_3eg:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/genesys-zu-3eg/D.0/board.xml as part xczu3eg-sfvc784-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:gzu_5ev:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/genesys-zu-5ev/C.0/board.xml as part xczu5ev-sfvc784-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zedboard:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zedboard/1.3/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo-z7-10:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zybo-z7-10/A.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo-z7-20:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zybo-z7-20/A.0/board.xml as part xc7z020clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zybo/B.3/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zybo/B.4/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
@@ -80,480 +101,14 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-INFO: [Project 1-313] Project file moved from 'C:/Users/bogur/Desktop/FPGA/passwordNator' since last save.
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.gen/sources_1'.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.gen/sources_1'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.ip_user_files'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
-open_project: Time (s): cpu = 00:00:45 ; elapsed = 00:00:26 . Memory (MB): peak = 1458.555 ; gain = 407.977
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1569.230 ; gain = 283.750
 update_compile_order -fileset sources_1
-ceexit
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 15 16:18:58 2023...
-urces_1/new/SYNC_BTN.vhd w ]
-add_files C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/top.dcp
-launch_runs synth_1 -jobs 8
-[Wed Nov 15 16:29:12 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 8
-[Wed Nov 15 16:30:23 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 16:31:50 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-ECHO is off.
-ECHO is off.
-
-****** Xilinx hw_server v2023.1
-  **** Build date : May  7 2023 at 15:26:57
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
-
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-ECHO is off.
-ECHO is off.
-
-
-******** Xilinx cs_server v2023.1.0
-  ****** Build date   : Apr 10 2023-17:59:24
-    **** Build number : 2023.1.1681142364
-      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
-      ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-
-
-
-connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1500.727 ; gain = 0.000
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AE3A67A
-current_hw_device [get_hw_devices xc7a100t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
-open_run impl_1
-INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1945.457 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2023.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2636.449 ; gain = 0.000
-open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 2636.449 ; gain = 1065.570
-INFO: [Common 17-344] 'open_run' was cancelled
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
-Starting synth_design
-Using part: xc7a100tcsg324-1
-Top: top
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2833.070 ; gain = 196.621
----------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:22]
-	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'the_machine_of_the_state' declared at 'C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:26' bound to instance 'fsm_inst' of component 'the_machine_of_the_state' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:99]
-INFO: [Synth 8-638] synthesizing module 'the_machine_of_the_state' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:37]
-	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
-WARNING: [Synth 8-614] signal 'password' is read in the process but is not in the sensitivity list [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:53]
-WARNING: [Synth 8-614] signal 'guess' is read in the process but is not in the sensitivity list [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:53]
-INFO: [Synth 8-256] done synthesizing module 'the_machine_of_the_state' (0#1) [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:37]
-INFO: [Synth 8-3491] module 'Decoder7' declared at 'C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd:29' bound to instance 'Deocoder7_inst' of component 'Decoder7' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:112]
-INFO: [Synth 8-638] synthesizing module 'Decoder7' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd:38]
-INFO: [Synth 8-256] done synthesizing module 'Decoder7' (0#1) [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd:38]
-	Parameter BLINK_CLK_DIVIDER bound to: 50000000 - type: integer 
-	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
-	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'BLINKER' declared at 'C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd:4' bound to instance 'Blinker_inst' of component 'BLINKER' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:118]
-INFO: [Synth 8-638] synthesizing module 'BLINKER' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd:20]
-	Parameter BLINK_CLK_DIVIDER bound to: 50000000 - type: integer 
-	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
-	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'BLINKER' (0#1) [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd:20]
-	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
-	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
-	Parameter DISPLAY_CHANGE_CLK_DIVIDER bound to: 1000000 - type: integer 
-INFO: [Synth 8-3491] module 'DISPLAY_MUX' declared at 'C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd:15' bound to instance 'DISPLAY_MUX_inst' of component 'DISPLAY_MUX' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:132]
-INFO: [Synth 8-638] synthesizing module 'DISPLAY_MUX' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd:31]
-	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
-	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
-	Parameter DISPLAY_CHANGE_CLK_DIVIDER bound to: 1000000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'DISPLAY_MUX' (0#1) [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd:31]
-	Parameter num_displays bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'Transistor_mux' declared at 'C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd:26' bound to instance 'Transistor_mux_inst' of component 'Transistor_mux' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:146]
-INFO: [Synth 8-638] synthesizing module 'Transistor_mux' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd:36]
-	Parameter num_displays bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'Transistor_mux' (0#1) [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd:36]
-INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:4' bound to instance 'OK_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:155]
-INFO: [Synth 8-638] synthesizing module 'SYNC_BUTTON' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'SYNC_BUTTON' (0#1) [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:22]
-WARNING: [Synth 8-7129] Port temporal_delete_after_use[4] in module top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port temporal_delete_after_use[3] in module top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port temporal_delete_after_use[2] in module top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port temporal_delete_after_use[1] in module top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port temporal_delete_after_use[0] in module top is either unconnected or has no load
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2937.059 ; gain = 300.609
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2937.059 ; gain = 300.609
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2937.059 ; gain = 300.609
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2937.059 ; gain = 0.000
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc]
-Finished Parsing XDC File [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc]
-Completed Processing XDC Constraints
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2966.133 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 3046.281 ; gain = 409.832
-22 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 3046.281 ; gain = 409.832
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292AE3A67A
-set_property IOSTANDARD LVCMOS33 [get_ports [list RESET]]
-place_ports RESET C12
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AE3A67A
-INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-set_property target_constrs_file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc [current_fileset -constrset]
-save_constraints -force
-reset_run impl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 16:35:32 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/top.dcp
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 16:38:48 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-[Wed Nov 15 16:38:48 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/top.dcp
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 16:43:47 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-[Wed Nov 15 16:43:47 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/top.dcp
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 16:48:18 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-[Wed Nov 15 16:48:18 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/top.dcp
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 16:52:52 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-[Wed Nov 15 16:52:52 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-close_design
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xc7a100tcsg324-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3075.863 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2023.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc]
-Finished Parsing XDC File [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc]
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3075.863 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-close_design
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
-Starting synth_design
-Using part: xc7a100tcsg324-1
-Top: top
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3075.863 ; gain = 0.000
----------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:23]
-	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'the_machine_of_the_state' declared at 'C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:26' bound to instance 'fsm_inst' of component 'the_machine_of_the_state' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:100]
-INFO: [Synth 8-638] synthesizing module 'the_machine_of_the_state' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:37]
-	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
-WARNING: [Synth 8-614] signal 'password' is read in the process but is not in the sensitivity list [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:53]
-WARNING: [Synth 8-614] signal 'guess' is read in the process but is not in the sensitivity list [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:53]
-INFO: [Synth 8-256] done synthesizing module 'the_machine_of_the_state' (0#1) [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:37]
-INFO: [Synth 8-3491] module 'Decoder7' declared at 'C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd:29' bound to instance 'Deocoder7_inst' of component 'Decoder7' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:113]
-INFO: [Synth 8-638] synthesizing module 'Decoder7' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd:38]
-INFO: [Synth 8-256] done synthesizing module 'Decoder7' (0#1) [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd:38]
-	Parameter BLINK_CLK_DIVIDER bound to: 50000000 - type: integer 
-	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
-	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'BLINKER' declared at 'C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd:4' bound to instance 'Blinker_inst' of component 'BLINKER' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:119]
-INFO: [Synth 8-638] synthesizing module 'BLINKER' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd:20]
-	Parameter BLINK_CLK_DIVIDER bound to: 50000000 - type: integer 
-	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
-	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'BLINKER' (0#1) [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd:20]
-	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
-	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
-	Parameter DISPLAY_CHANGE_CLK_DIVIDER bound to: 100000 - type: integer 
-INFO: [Synth 8-3491] module 'DISPLAY_MUX' declared at 'C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd:15' bound to instance 'DISPLAY_MUX_inst' of component 'DISPLAY_MUX' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:133]
-INFO: [Synth 8-638] synthesizing module 'DISPLAY_MUX' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd:31]
-	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
-	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
-	Parameter DISPLAY_CHANGE_CLK_DIVIDER bound to: 100000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'DISPLAY_MUX' (0#1) [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd:31]
-	Parameter num_displays bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'Transistor_mux' declared at 'C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd:26' bound to instance 'Transistor_mux_inst' of component 'Transistor_mux' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:147]
-INFO: [Synth 8-638] synthesizing module 'Transistor_mux' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd:36]
-	Parameter num_displays bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'Transistor_mux' (0#1) [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd:36]
-INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:4' bound to instance 'OK_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:156]
-INFO: [Synth 8-638] synthesizing module 'SYNC_BUTTON' [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'SYNC_BUTTON' (0#1) [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:23]
-WARNING: [Synth 8-3917] design top has port DOT driven by constant 1
-WARNING: [Synth 8-7129] Port temporal_delete_after_use[4] in module top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port temporal_delete_after_use[3] in module top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port temporal_delete_after_use[2] in module top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port temporal_delete_after_use[1] in module top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port temporal_delete_after_use[0] in module top is either unconnected or has no load
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3075.863 ; gain = 0.000
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3075.863 ; gain = 0.000
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3075.863 ; gain = 0.000
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 3075.863 ; gain = 0.000
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc]
-Finished Parsing XDC File [C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc]
-Completed Processing XDC Constraints
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3124.945 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 3124.945 ; gain = 49.082
-22 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 3124.945 ; gain = 49.082
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 16:59:38 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 17:04:49 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 17:07:45 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292AE3A67A
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/top.dcp
-launch_runs synth_1 -jobs 8
-[Wed Nov 15 17:21:29 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 8
-[Wed Nov 15 17:22:32 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AE3A67A
-INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 17:24:06 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 17:27:03 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/top.dcp
-launch_runs synth_1 -jobs 8
-[Wed Nov 15 17:28:27 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 8
-[Wed Nov 15 17:29:29 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 17:30:54 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292AE3A67A
-update_compile_order -fileset sources_1
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/top.dcp
-launch_runs synth_1 -jobs 8
-[Wed Nov 15 17:42:12 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 17:44:18 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-[Wed Nov 15 17:44:18 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 17:47:18 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-[Wed Nov 15 17:47:18 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 17:48:12 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-[Wed Nov 15 17:48:12 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 17:50:12 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-[Wed Nov 15 17:50:12 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 17:52:47 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-[Wed Nov 15 17:52:47 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 17:56:06 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-[Wed Nov 15 17:56:06 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 18:00:37 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-[Wed Nov 15 18:00:37 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 18:02:01 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-[Wed Nov 15 18:02:01 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 18:05:17 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-[Wed Nov 15 18:05:17 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 18:06:28 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-[Wed Nov 15 18:06:28 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed Nov 15 18:08:07 2023] Launched synth_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/runme.log
-[Wed Nov 15 18:08:07 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/impl_1/runme.log
 exit
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 15 18:09:24 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 15 22:28:52 2023...

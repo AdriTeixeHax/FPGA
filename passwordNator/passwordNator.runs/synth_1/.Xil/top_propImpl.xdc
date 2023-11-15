@@ -1,6 +1,20 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc rfile:../../../passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc} rfile:../../../passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { CLK }]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
+set_property src_info {type:XDC file:1 line:68 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN H15   IOSTANDARD LVCMOS33 } [get_ports { DOT }]; #IO_L19N_T3_A21_VREF_15 Sch=dp
+set_property src_info {type:XDC file:1 line:82 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN C12   IOSTANDARD LVCMOS33 } [get_ports { RESET }]; #IO_L3P_T0_DQS_AD1P_15 Sch=cpu_resetn
+set_property src_info {type:XDC file:1 line:84 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN N17   IOSTANDARD LVCMOS33 } [get_ports { OK_B }]; #IO_L9P_T1_DQS_14 Sch=btnc
+set_property src_info {type:XDC file:1 line:85 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN M18   IOSTANDARD LVCMOS33 } [get_ports { UP_B }]; #IO_L4N_T0_D05_14 Sch=btnu
+set_property src_info {type:XDC file:1 line:86 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN P17   IOSTANDARD LVCMOS33 } [get_ports { LEFT_B }]; #IO_L12P_T1_MRCC_14 Sch=btnl
+set_property src_info {type:XDC file:1 line:87 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN M17   IOSTANDARD LVCMOS33 } [get_ports { RIGHT_B }]; #IO_L10N_T1_D15_14 Sch=btnr
+set_property src_info {type:XDC file:1 line:88 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN P18   IOSTANDARD LVCMOS33 } [get_ports { DOWN_B }]; #IO_L9N_T1_DQS_D13_14 Sch=btnd
 set_property src_info {type:XDC file:1 line:283 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN T10 [get_ports {s7[0]}]
 set_property src_info {type:XDC file:1 line:284 export:INPUT save:INPUT read:READ} [current_design]

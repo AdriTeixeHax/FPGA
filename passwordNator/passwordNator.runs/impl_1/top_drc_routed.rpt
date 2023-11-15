@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2023.1.1 (win64) Build 3900603 Fri Jun 16 19:31:24 MDT 2023
-| Date         : Mon Nov 13 17:55:01 2023
-| Host         : LAPTOP-1917 running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Wed Nov 15 22:25:07 2023
+| Host         : DESKTOP-MOPDCTP running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
 | Design       : top
 | Device       : xc7a100tcsg324-1
@@ -20,16 +20,20 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: checkpoint_top
+          Floorplan: design_1
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 2
+             Violations found: 17
 +-----------+----------+-----------------------------------------------------+------------+
 | Rule      | Severity | Description                                         | Violations |
 +-----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
 | CFGBVS-11 | Warning  | CONFIG_VOLTAGE with HR Config Banks                 | 1          |
+| DPIP-1    | Warning  | Input pipelining                                    | 4          |
+| DPOP-1    | Warning  | PREG Output pipelining                              | 4          |
+| DPOP-2    | Warning  | MREG Output pipelining                              | 4          |
+| PDRC-153  | Warning  | Gated clock check                                   | 3          |
 +-----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -50,6 +54,81 @@ Related violations: <none>
 CFGBVS-11#1 Warning
 CONFIG_VOLTAGE with HR Config Banks  
 Unable to determine configuration voltage for configuration Bank 14. When multi-function configuration banks are being used for configuration Vivado must be able to determine the configuration voltage to be used. Using PERSIST or EMCCLK implies that a multi-function configuration bank is being used. If this is not the case, please do not use these settings. Otherwise, if the bank is being used for configuration, please use set_property CONFIG_VOLTAGE [current_design] to indicate the voltage to be used.
+Related violations: <none>
+
+DPIP-1#1 Warning
+Input pipelining  
+DSP fsm_inst/selector_inst_attempt/natural_out1 input fsm_inst/selector_inst_attempt/natural_out1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP fsm_inst/selector_inst_attempt/natural_out2 input fsm_inst/selector_inst_attempt/natural_out2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP fsm_inst/selector_inst_password/natural_out1 input fsm_inst/selector_inst_password/natural_out1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP fsm_inst/selector_inst_password/natural_out2 input fsm_inst/selector_inst_password/natural_out2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP fsm_inst/selector_inst_attempt/natural_out1 output fsm_inst/selector_inst_attempt/natural_out1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#2 Warning
+PREG Output pipelining  
+DSP fsm_inst/selector_inst_attempt/natural_out2 output fsm_inst/selector_inst_attempt/natural_out2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#3 Warning
+PREG Output pipelining  
+DSP fsm_inst/selector_inst_password/natural_out1 output fsm_inst/selector_inst_password/natural_out1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#4 Warning
+PREG Output pipelining  
+DSP fsm_inst/selector_inst_password/natural_out2 output fsm_inst/selector_inst_password/natural_out2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP fsm_inst/selector_inst_attempt/natural_out1 multiplier stage fsm_inst/selector_inst_attempt/natural_out1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP fsm_inst/selector_inst_attempt/natural_out2 multiplier stage fsm_inst/selector_inst_attempt/natural_out2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#3 Warning
+MREG Output pipelining  
+DSP fsm_inst/selector_inst_password/natural_out1 multiplier stage fsm_inst/selector_inst_password/natural_out1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#4 Warning
+MREG Output pipelining  
+DSP fsm_inst/selector_inst_password/natural_out2 multiplier stage fsm_inst/selector_inst_password/natural_out2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net fsm_inst/ce_attempt_reg_i_2_n_0 is a gated clock net sourced by a combinational pin fsm_inst/ce_attempt_reg_i_2/O, cell fsm_inst/ce_attempt_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net fsm_inst/ce_password_reg_i_2_n_0 is a gated clock net sourced by a combinational pin fsm_inst/ce_password_reg_i_2/O, cell fsm_inst/ce_password_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net fsm_inst/reset_password_reg_i_2_n_0 is a gated clock net sourced by a combinational pin fsm_inst/reset_password_reg_i_2/O, cell fsm_inst/reset_password_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

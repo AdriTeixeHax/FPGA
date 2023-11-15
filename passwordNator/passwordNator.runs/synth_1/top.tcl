@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.runs/synth_1/top.tcl"
+  variable script "C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -71,10 +71,6 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 2
-set_param synth.incrementalSynthesisCache C:/Users/Rubikrazy/Desktop/passwordNator/.Xil/Vivado-352-DESKTOP-PBHAH2K/incrSyn
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -83,23 +79,23 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.cache/wt [current_project]
-set_property parent.project_path C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.xpr [current_project]
+set_property webtalk.parent_dir {C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo c:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.cache/ip [current_project]
+set_property ip_output_repo {c:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd
-  C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd
-  C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd
-  C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd
-  C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Selector.vhd
-  C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd
-  C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd
-  C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/sources_1/new/top.vhd
+  {C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd}
+  {C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd}
+  {C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd}
+  {C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd}
+  {C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Selector.vhd}
+  {C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd}
+  {C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd}
+  {C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -110,12 +106,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc
-set_property used_in_implementation false [get_files C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc]
+read_xdc {{C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/Rubikrazy/Desktop/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp
+read_checkpoint -auto_incremental -incremental {C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp}
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
