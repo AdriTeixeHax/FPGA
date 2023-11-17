@@ -19,21 +19,27 @@ architecture BEHAVIOURAL of SYNC_BUTTON is
 begin
     process (CLK)
     variable COUNTER: natural range 0 to BUTTON_CLOCK_DIVITION := 0;
-    variable BUTTON_PRESSED_VAR: std_logic := '0';
+    variable BUTTON_ON_COOLDOWN: std_logic := '0';
+    variable BUTTON_RELEASE_ON_COOLDOWN: std_logic := '0';
     begin
         if rising_edge(CLK) then
             SYNC_OUT <= '0';
-            if ASYNC_IN = '1' and BUTTON_PRESSED_VAR = '0' then
-                BUTTON_PRESSED_VAR := '1';
+            if ASYNC_IN = '1' and BUTTON_ON_COOLDOWN = '0' then
+             BUTTON_ON_COOLDOWN := '1';
                 SYNC_OUT <= '1';
             end if;
-            if BUTTON_PRESSED_VAR = '1' then
+            if BUTTON_ON_COOLDOWN = '1' then
                 if COUNTER = BUTTON_CLOCK_DIVITION and ASYNC_IN = '0' then
                     COUNTER := 0;
-                    BUTTON_PRESSED_VAR := '0';
+                    if BUTTON_RELEASE_ON_COOLDOWN = '0' then
+                        BUTTON_RELEASE_ON_COOLDOWN := '1';
+                    else
+                        BUTTON_ON_COOLDOWN := '0';
+                        BUTTON_RELEASE_ON_COOLDOWN := '1';
+                    end if;
                 elsif COUNTER < BUTTON_CLOCK_DIVITION then
                     COUNTER := COUNTER + 1;
-                end if;                
+                end if;               
             end if;
         end if;
     end process;
