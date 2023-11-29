@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Wed Nov 15 22:25:09 2023
-| Host         : DESKTOP-MOPDCTP running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2023.1.1 (win64) Build 3900603 Fri Jun 16 19:31:24 MDT 2023
+| Date         : Wed Nov 29 17:02:37 2023
+| Host         : LAPTOP-1917 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
 | Design       : top
 | Device       : 7a100t-csg324
@@ -42,9 +42,8 @@ Timing Summary Report
 
 Rule       Severity          Description                     Violations  
 ---------  ----------------  ------------------------------  ----------  
-TIMING-17  Critical Warning  Non-clocked sequential cell     709         
+TIMING-17  Critical Warning  Non-clocked sequential cell     694         
 TIMING-20  Warning           Non-clocked latch               3           
-TIMING-23  Warning           Combinational loop found        54          
 LATCH-1    Advisory          Existing latches in the design  1           
 
 Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
@@ -55,22 +54,22 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (718)
+1. checking no_clock (703)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (2012)
+4. checking unconstrained_internal_endpoints (1985)
 5. checking no_input_delay (6)
 6. checking no_output_delay (15)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
-9. checking loops (54)
+9. checking loops (0)
 10. checking partial_input_delay (0)
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (718)
+1. checking no_clock (703)
 --------------------------
- There are 709 register/latch pins with no clock driven by root clock pin: CLK (HIGH)
+ There are 694 register/latch pins with no clock driven by root clock pin: CLK (HIGH)
 
  There are 3 register/latch pins with no clock driven by root clock pin: fsm_inst/FSM_sequential_current_state_reg[0]/Q (HIGH)
 
@@ -89,9 +88,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (2012)
+4. checking unconstrained_internal_endpoints (1985)
 ---------------------------------------------------
- There are 2012 pins that are not constrained for maximum delay. (HIGH)
+ There are 1985 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -122,9 +121,9 @@ Table of Contents
  There are 0 generated clocks that are not connected to a clock source.
 
 
-9. checking loops (54)
-----------------------
- There are 54 combinational loops in the design. (HIGH)
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
 
 
 10. checking partial_input_delay (0)
@@ -150,7 +149,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-        inf        0.000                      0                 2027          inf        0.000                      0                 2027           NA           NA                      NA                    NA  
+        inf        0.000                      0                 2000          inf        0.000                      0                 2000           NA           NA                      NA                    NA  
 
 
 There are no user specified timing constraints.
@@ -219,695 +218,294 @@ Path Group:  (none)
 From Clock:  
   To Clock:  
 
-Max Delay          2027 Endpoints
-Min Delay          2027 Endpoints
+Max Delay          2000 Endpoints
+Min Delay          2000 Endpoints
 --------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 fsm_inst/selector_inst_attempt/led_code_aux_reg[6][16]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            fsm_inst/FSM_sequential_current_state_reg[1]/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        74.136ns  (logic 31.731ns (42.801%)  route 42.405ns (57.199%))
-  Logic Levels:           87  (CARRY4=38 DSP48E1=1 FDRE=1 LUT2=1 LUT3=12 LUT4=33 LUT6=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X11Y99         FDRE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/led_code_aux_reg[6][16]/C
-    SLICE_X11Y99         FDRE (Prop_fdre_C_Q)         0.456     0.456 r  fsm_inst/selector_inst_attempt/led_code_aux_reg[6][16]/Q
-                         net (fo=2, routed)           1.038     1.494    fsm_inst/selector_inst_attempt/led_code_aux_reg_n_0_[6][16]
-    DSP48_X0Y37          DSP48E1 (Prop_dsp48e1_B[16]_P[0])
-                                                      3.656     5.150 r  fsm_inst/selector_inst_attempt/natural_out2/P[0]
-                         net (fo=2, routed)           0.926     6.077    fsm_inst/selector_inst_attempt/natural_out2_n_105
-    SLICE_X13Y90         LUT3 (Prop_lut3_I1_O)        0.124     6.201 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry_i_7/O
-                         net (fo=1, routed)           0.000     6.201    fsm_inst/selector_inst_attempt/natural_out0__0_carry_i_7_n_0
-    SLICE_X13Y90         CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247     6.448 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry/O[0]
-                         net (fo=3, routed)           0.755     7.202    fsm_inst/selector_inst_attempt/natural_out0__0_carry_n_7
-    SLICE_X9Y90          LUT2 (Prop_lut2_I0_O)        0.299     7.501 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry_i_7/O
-                         net (fo=1, routed)           0.000     7.501    fsm_inst/selector_inst_attempt/natural_out0__222_carry_i_7_n_0
-    SLICE_X9Y90          CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247     7.748 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry/O[0]
-                         net (fo=3, routed)           0.983     8.731    fsm_inst/selector_inst_attempt/guess[0]
-    SLICE_X13Y90         LUT3 (Prop_lut3_I0_O)        0.327     9.058 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry_i_3/O
-                         net (fo=2, routed)           0.944    10.002    fsm_inst/selector_inst_attempt/natural_out0__0_carry_i_3_n_0
-    SLICE_X13Y90         CARRY4 (Prop_carry4_DI[1]_O[2])
-                                                      0.739    10.741 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry/O[2]
-                         net (fo=2, routed)           0.940    11.681    fsm_inst/selector_inst_attempt/natural_out0__0_carry_n_5
-    SLICE_X9Y90          LUT4 (Prop_lut4_I1_O)        0.302    11.983 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry_i_5/O
-                         net (fo=1, routed)           0.000    11.983    fsm_inst/selector_inst_attempt/natural_out0__222_carry_i_5_n_0
-    SLICE_X9Y90          CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.248    12.231 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry/O[2]
-                         net (fo=3, routed)           0.819    13.050    fsm_inst/selector_inst_attempt/guess[2]
-    SLICE_X13Y90         LUT4 (Prop_lut4_I0_O)        0.302    13.352 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry_i_5/O
-                         net (fo=1, routed)           0.000    13.352    fsm_inst/selector_inst_attempt/natural_out0__0_carry_i_5_n_0
-    SLICE_X13Y90         CARRY4 (Prop_carry4_S[2]_O[3])
-                                                      0.352    13.704 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry/O[3]
-                         net (fo=2, routed)           0.744    14.448    fsm_inst/selector_inst_attempt/natural_out0__0_carry_n_4
-    SLICE_X9Y90          LUT4 (Prop_lut4_I0_O)        0.306    14.754 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry_i_4/O
-                         net (fo=1, routed)           0.000    14.754    fsm_inst/selector_inst_attempt/natural_out0__222_carry_i_4_n_0
-    SLICE_X9Y90          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.248    15.002 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry/O[3]
-                         net (fo=3, routed)           0.752    15.755    fsm_inst/selector_inst_attempt/guess[3]
-    SLICE_X13Y90         LUT4 (Prop_lut4_I0_O)        0.306    16.061 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry_i_4/O
-                         net (fo=1, routed)           0.000    16.061    fsm_inst/selector_inst_attempt/natural_out0__0_carry_i_4_n_0
-    SLICE_X13Y90         CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401    16.462 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry/CO[3]
-                         net (fo=1, routed)           0.000    16.462    fsm_inst/selector_inst_attempt/natural_out0__0_carry_n_0
-    SLICE_X13Y91         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.223    16.685 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__0/O[0]
-                         net (fo=2, routed)           0.573    17.258    fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_n_7
-    SLICE_X9Y91          LUT4 (Prop_lut4_I0_O)        0.299    17.557 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__0_i_8/O
-                         net (fo=1, routed)           0.000    17.557    fsm_inst/selector_inst_attempt/natural_out0__222_carry__0_i_8_n_0
-    SLICE_X9Y91          CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247    17.804 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__0/O[0]
-                         net (fo=3, routed)           0.761    18.565    fsm_inst/selector_inst_attempt/guess[4]
-    SLICE_X13Y91         LUT4 (Prop_lut4_I0_O)        0.299    18.864 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_i_8/O
-                         net (fo=1, routed)           0.000    18.864    fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_i_8_n_0
-    SLICE_X13Y91         CARRY4 (Prop_carry4_S[0]_O[1])
-                                                      0.424    19.288 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__0/O[1]
-                         net (fo=2, routed)           0.583    19.871    fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_n_6
-    SLICE_X9Y91          LUT4 (Prop_lut4_I0_O)        0.303    20.174 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__0_i_7/O
-                         net (fo=1, routed)           0.000    20.174    fsm_inst/selector_inst_attempt/natural_out0__222_carry__0_i_7_n_0
-    SLICE_X9Y91          CARRY4 (Prop_carry4_S[1]_O[1])
-                                                      0.227    20.401 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__0/O[1]
-                         net (fo=3, routed)           0.588    20.989    fsm_inst/selector_inst_attempt/guess[5]
-    SLICE_X13Y91         LUT4 (Prop_lut4_I0_O)        0.303    21.292 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_i_7/O
-                         net (fo=1, routed)           0.000    21.292    fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_i_7_n_0
-    SLICE_X13Y91         CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.580    21.872 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__0/O[2]
-                         net (fo=2, routed)           0.973    22.845    fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_n_5
-    SLICE_X9Y91          LUT4 (Prop_lut4_I0_O)        0.302    23.147 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__0_i_6/O
-                         net (fo=1, routed)           0.000    23.147    fsm_inst/selector_inst_attempt/natural_out0__222_carry__0_i_6_n_0
-    SLICE_X9Y91          CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.248    23.395 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__0/O[2]
-                         net (fo=3, routed)           0.819    24.214    fsm_inst/selector_inst_attempt/guess[6]
-    SLICE_X13Y91         LUT4 (Prop_lut4_I0_O)        0.302    24.516 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_i_6/O
-                         net (fo=1, routed)           0.000    24.516    fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_i_6_n_0
-    SLICE_X13Y91         CARRY4 (Prop_carry4_S[2]_O[3])
-                                                      0.352    24.868 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__0/O[3]
-                         net (fo=2, routed)           0.744    25.612    fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_n_4
-    SLICE_X9Y91          LUT3 (Prop_lut3_I0_O)        0.331    25.943 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_4/O
-                         net (fo=2, routed)           0.817    26.760    fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_4_n_0
-    SLICE_X9Y92          LUT4 (Prop_lut4_I3_O)        0.332    27.092 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_8/O
-                         net (fo=1, routed)           0.000    27.092    fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_8_n_0
-    SLICE_X9Y92          CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247    27.339 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__1/O[0]
-                         net (fo=3, routed)           0.975    28.314    fsm_inst/selector_inst_attempt/guess[8]
-    SLICE_X13Y92         LUT3 (Prop_lut3_I0_O)        0.327    28.641 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__1_i_3/O
-                         net (fo=2, routed)           1.228    29.869    fsm_inst/selector_inst_attempt/natural_out0__0_carry__1_i_3_n_0
-    SLICE_X13Y92         LUT4 (Prop_lut4_I3_O)        0.326    30.195 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__1_i_7/O
-                         net (fo=1, routed)           0.000    30.195    fsm_inst/selector_inst_attempt/natural_out0__0_carry__1_i_7_n_0
-    SLICE_X13Y92         CARRY4 (Prop_carry4_S[1]_O[1])
-                                                      0.227    30.422 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__1/O[1]
-                         net (fo=2, routed)           0.576    30.998    fsm_inst/selector_inst_attempt/natural_out0__0_carry__1_n_6
-    SLICE_X9Y92          LUT4 (Prop_lut4_I0_O)        0.303    31.301 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_7/O
-                         net (fo=1, routed)           0.000    31.301    fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_7_n_0
-    SLICE_X9Y92          CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.580    31.881 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__1/O[2]
-                         net (fo=3, routed)           1.126    33.007    fsm_inst/selector_inst_attempt/guess[10]
-    SLICE_X13Y92         LUT4 (Prop_lut4_I0_O)        0.302    33.309 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__1_i_6/O
-                         net (fo=1, routed)           0.000    33.309    fsm_inst/selector_inst_attempt/natural_out0__0_carry__1_i_6_n_0
-    SLICE_X13Y92         CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.248    33.557 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__1/O[2]
-                         net (fo=2, routed)           1.133    34.691    fsm_inst/selector_inst_attempt/natural_out0__0_carry__1_n_5
-    SLICE_X9Y92          LUT4 (Prop_lut4_I0_O)        0.302    34.993 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_6/O
-                         net (fo=1, routed)           0.000    34.993    fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_6_n_0
-    SLICE_X9Y92          CARRY4 (Prop_carry4_S[2]_O[3])
-                                                      0.352    35.345 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__1/O[3]
-                         net (fo=3, routed)           0.914    36.259    fsm_inst/selector_inst_attempt/guess[11]
-    SLICE_X13Y92         LUT3 (Prop_lut3_I0_O)        0.331    36.590 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_i_4/O
-                         net (fo=2, routed)           0.645    37.235    fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_i_4_n_0
-    SLICE_X13Y93         LUT4 (Prop_lut4_I3_O)        0.332    37.567 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_i_8/O
-                         net (fo=1, routed)           0.000    37.567    fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_i_8_n_0
-    SLICE_X13Y93         CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247    37.814 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__2/O[0]
-                         net (fo=2, routed)           0.745    38.560    fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_n_7
-    SLICE_X9Y93          LUT3 (Prop_lut3_I0_O)        0.325    38.885 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__2_i_3/O
-                         net (fo=2, routed)           0.662    39.547    fsm_inst/selector_inst_attempt/natural_out0__222_carry__2_i_3_n_0
-    SLICE_X9Y93          LUT4 (Prop_lut4_I3_O)        0.326    39.873 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__2_i_7/O
-                         net (fo=1, routed)           0.000    39.873    fsm_inst/selector_inst_attempt/natural_out0__222_carry__2_i_7_n_0
-    SLICE_X9Y93          CARRY4 (Prop_carry4_S[1]_O[1])
-                                                      0.227    40.100 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__2/O[1]
-                         net (fo=3, routed)           1.125    41.224    fsm_inst/selector_inst_attempt/guess[13]
-    SLICE_X13Y93         LUT4 (Prop_lut4_I0_O)        0.303    41.527 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_i_7/O
-                         net (fo=1, routed)           0.000    41.527    fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_i_7_n_0
-    SLICE_X13Y93         CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.580    42.107 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__2/O[2]
-                         net (fo=2, routed)           1.101    43.208    fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_n_5
-    SLICE_X9Y93          LUT4 (Prop_lut4_I0_O)        0.302    43.510 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__2_i_6/O
-                         net (fo=1, routed)           0.000    43.510    fsm_inst/selector_inst_attempt/natural_out0__222_carry__2_i_6_n_0
-    SLICE_X9Y93          CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.248    43.758 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__2/O[2]
-                         net (fo=3, routed)           1.134    44.892    fsm_inst/selector_inst_attempt/guess[14]
-    SLICE_X13Y93         LUT4 (Prop_lut4_I0_O)        0.302    45.194 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_i_6/O
-                         net (fo=1, routed)           0.000    45.194    fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_i_6_n_0
-    SLICE_X13Y93         CARRY4 (Prop_carry4_S[2]_O[3])
-                                                      0.352    45.546 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__2/O[3]
-                         net (fo=2, routed)           0.744    46.290    fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_n_4
-    SLICE_X9Y93          LUT3 (Prop_lut3_I0_O)        0.331    46.621 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_4/O
-                         net (fo=2, routed)           0.594    47.215    fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_4_n_0
-    SLICE_X9Y94          LUT4 (Prop_lut4_I3_O)        0.332    47.547 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_8/O
-                         net (fo=1, routed)           0.000    47.547    fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_8_n_0
-    SLICE_X9Y94          CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247    47.794 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__3/O[0]
-                         net (fo=3, routed)           0.770    48.565    fsm_inst/selector_inst_attempt/guess[16]
-    SLICE_X13Y94         LUT3 (Prop_lut3_I0_O)        0.325    48.890 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__3_i_3/O
-                         net (fo=2, routed)           0.666    49.556    fsm_inst/selector_inst_attempt/natural_out0__0_carry__3_i_3_n_0
-    SLICE_X13Y94         LUT4 (Prop_lut4_I3_O)        0.326    49.882 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__3_i_7/O
-                         net (fo=1, routed)           0.000    49.882    fsm_inst/selector_inst_attempt/natural_out0__0_carry__3_i_7_n_0
-    SLICE_X13Y94         CARRY4 (Prop_carry4_S[1]_O[1])
-                                                      0.227    50.109 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__3/O[1]
-                         net (fo=2, routed)           0.985    51.093    fsm_inst/selector_inst_attempt/natural_out0__0_carry__3_n_6
-    SLICE_X9Y94          LUT4 (Prop_lut4_I0_O)        0.303    51.396 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_7/O
-                         net (fo=1, routed)           0.000    51.396    fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_7_n_0
-    SLICE_X9Y94          CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.580    51.976 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__3/O[2]
-                         net (fo=3, routed)           0.606    52.582    fsm_inst/selector_inst_attempt/guess[18]
-    SLICE_X13Y94         LUT4 (Prop_lut4_I0_O)        0.302    52.884 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__3_i_6/O
-                         net (fo=1, routed)           0.000    52.884    fsm_inst/selector_inst_attempt/natural_out0__0_carry__3_i_6_n_0
-    SLICE_X13Y94         CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.248    53.132 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__3/O[2]
-                         net (fo=2, routed)           0.967    54.099    fsm_inst/selector_inst_attempt/natural_out0__0_carry__3_n_5
-    SLICE_X9Y94          LUT4 (Prop_lut4_I0_O)        0.302    54.401 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_6/O
-                         net (fo=1, routed)           0.000    54.401    fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_6_n_0
-    SLICE_X9Y94          CARRY4 (Prop_carry4_S[2]_O[3])
-                                                      0.352    54.753 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__3/O[3]
-                         net (fo=3, routed)           0.734    55.487    fsm_inst/selector_inst_attempt/guess[19]
-    SLICE_X13Y94         LUT3 (Prop_lut3_I0_O)        0.299    55.786 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_i_4/O
-                         net (fo=2, routed)           0.645    56.432    fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_i_4_n_0
-    SLICE_X13Y95         LUT4 (Prop_lut4_I3_O)        0.332    56.764 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_i_8/O
-                         net (fo=1, routed)           0.000    56.764    fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_i_8_n_0
-    SLICE_X13Y95         CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247    57.011 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__4/O[0]
-                         net (fo=2, routed)           0.764    57.774    fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_n_7
-    SLICE_X9Y95          LUT3 (Prop_lut3_I0_O)        0.325    58.099 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_3/O
-                         net (fo=2, routed)           1.011    59.111    fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_3_n_0
-    SLICE_X9Y95          LUT4 (Prop_lut4_I3_O)        0.326    59.437 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_7/O
-                         net (fo=1, routed)           0.000    59.437    fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_7_n_0
-    SLICE_X9Y95          CARRY4 (Prop_carry4_S[1]_O[1])
-                                                      0.227    59.664 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__4/O[1]
-                         net (fo=3, routed)           0.987    60.651    fsm_inst/selector_inst_attempt/guess[21]
-    SLICE_X13Y95         LUT4 (Prop_lut4_I0_O)        0.303    60.954 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_i_7/O
-                         net (fo=1, routed)           0.000    60.954    fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_i_7_n_0
-    SLICE_X13Y95         CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.580    61.534 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__4/O[2]
-                         net (fo=2, routed)           0.967    62.501    fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_n_5
-    SLICE_X9Y95          LUT4 (Prop_lut4_I0_O)        0.302    62.803 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_6/O
-                         net (fo=1, routed)           0.000    62.803    fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_6_n_0
-    SLICE_X9Y95          CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.248    63.051 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__4/O[2]
-                         net (fo=3, routed)           0.981    64.032    fsm_inst/selector_inst_attempt/guess[22]
-    SLICE_X13Y95         LUT4 (Prop_lut4_I0_O)        0.302    64.334 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_i_6/O
-                         net (fo=1, routed)           0.000    64.334    fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_i_6_n_0
-    SLICE_X13Y95         CARRY4 (Prop_carry4_S[2]_O[3])
-                                                      0.352    64.686 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__4/O[3]
-                         net (fo=2, routed)           0.744    65.430    fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_n_4
-    SLICE_X9Y95          LUT4 (Prop_lut4_I0_O)        0.306    65.736 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_5/O
-                         net (fo=1, routed)           0.000    65.736    fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_5_n_0
-    SLICE_X9Y95          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.248    65.984 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__4/O[3]
-                         net (fo=3, routed)           0.963    66.947    fsm_inst/selector_inst_attempt/guess[23]
-    SLICE_X13Y95         LUT3 (Prop_lut3_I0_O)        0.331    67.278 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__5_i_2/O
-                         net (fo=2, routed)           0.645    67.924    fsm_inst/selector_inst_attempt/natural_out0__0_carry__5_i_2_n_0
-    SLICE_X13Y96         LUT4 (Prop_lut4_I3_O)        0.332    68.256 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__5_i_5/O
-                         net (fo=1, routed)           0.000    68.256    fsm_inst/selector_inst_attempt/natural_out0__0_carry__5_i_5_n_0
-    SLICE_X13Y96         CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247    68.503 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__5/O[0]
-                         net (fo=2, routed)           0.902    69.404    fsm_inst/selector_inst_attempt/natural_out0__0_carry__5_n_7
-    SLICE_X9Y96          LUT3 (Prop_lut3_I0_O)        0.325    69.729 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__5_i_1/O
-                         net (fo=2, routed)           0.727    70.456    fsm_inst/selector_inst_attempt/natural_out0__222_carry__5_i_1_n_0
-    SLICE_X9Y96          CARRY4 (Prop_carry4_DI[1]_O[2])
-                                                      0.739    71.195 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__5/O[2]
-                         net (fo=2, routed)           0.798    71.993    fsm_inst/selector_inst_password/guess[26]
-    SLICE_X9Y88          LUT6 (Prop_lut6_I4_O)        0.302    72.295 r  fsm_inst/selector_inst_password/FSM_sequential_current_state[1]_i_4/O
-                         net (fo=1, routed)           0.000    72.295    fsm_inst/selector_inst_password/FSM_sequential_current_state[1]_i_4_n_0
-    SLICE_X9Y88          CARRY4 (Prop_carry4_S[0]_CO[0])
-                                                      0.364    72.659 f  fsm_inst/selector_inst_password/FSM_sequential_current_state_reg[1]_i_2/CO[0]
-                         net (fo=2, routed)           1.079    73.738    fsm_inst/selector_inst_password/in2
-    SLICE_X7Y79          LUT4 (Prop_lut4_I0_O)        0.398    74.136 r  fsm_inst/selector_inst_password/FSM_sequential_current_state[1]_i_1/O
-                         net (fo=1, routed)           0.000    74.136    fsm_inst/next_state[1]
-    SLICE_X7Y79          FDCE                                         r  fsm_inst/FSM_sequential_current_state_reg[1]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 fsm_inst/selector_inst_attempt/led_code_aux_reg[6][16]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            fsm_inst/FSM_sequential_current_state_reg[0]/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        74.111ns  (logic 31.706ns (42.782%)  route 42.405ns (57.218%))
-  Logic Levels:           87  (CARRY4=38 DSP48E1=1 FDRE=1 LUT2=1 LUT3=12 LUT4=33 LUT6=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X11Y99         FDRE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/led_code_aux_reg[6][16]/C
-    SLICE_X11Y99         FDRE (Prop_fdre_C_Q)         0.456     0.456 r  fsm_inst/selector_inst_attempt/led_code_aux_reg[6][16]/Q
-                         net (fo=2, routed)           1.038     1.494    fsm_inst/selector_inst_attempt/led_code_aux_reg_n_0_[6][16]
-    DSP48_X0Y37          DSP48E1 (Prop_dsp48e1_B[16]_P[0])
-                                                      3.656     5.150 r  fsm_inst/selector_inst_attempt/natural_out2/P[0]
-                         net (fo=2, routed)           0.926     6.077    fsm_inst/selector_inst_attempt/natural_out2_n_105
-    SLICE_X13Y90         LUT3 (Prop_lut3_I1_O)        0.124     6.201 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry_i_7/O
-                         net (fo=1, routed)           0.000     6.201    fsm_inst/selector_inst_attempt/natural_out0__0_carry_i_7_n_0
-    SLICE_X13Y90         CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247     6.448 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry/O[0]
-                         net (fo=3, routed)           0.755     7.202    fsm_inst/selector_inst_attempt/natural_out0__0_carry_n_7
-    SLICE_X9Y90          LUT2 (Prop_lut2_I0_O)        0.299     7.501 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry_i_7/O
-                         net (fo=1, routed)           0.000     7.501    fsm_inst/selector_inst_attempt/natural_out0__222_carry_i_7_n_0
-    SLICE_X9Y90          CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247     7.748 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry/O[0]
-                         net (fo=3, routed)           0.983     8.731    fsm_inst/selector_inst_attempt/guess[0]
-    SLICE_X13Y90         LUT3 (Prop_lut3_I0_O)        0.327     9.058 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry_i_3/O
-                         net (fo=2, routed)           0.944    10.002    fsm_inst/selector_inst_attempt/natural_out0__0_carry_i_3_n_0
-    SLICE_X13Y90         CARRY4 (Prop_carry4_DI[1]_O[2])
-                                                      0.739    10.741 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry/O[2]
-                         net (fo=2, routed)           0.940    11.681    fsm_inst/selector_inst_attempt/natural_out0__0_carry_n_5
-    SLICE_X9Y90          LUT4 (Prop_lut4_I1_O)        0.302    11.983 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry_i_5/O
-                         net (fo=1, routed)           0.000    11.983    fsm_inst/selector_inst_attempt/natural_out0__222_carry_i_5_n_0
-    SLICE_X9Y90          CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.248    12.231 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry/O[2]
-                         net (fo=3, routed)           0.819    13.050    fsm_inst/selector_inst_attempt/guess[2]
-    SLICE_X13Y90         LUT4 (Prop_lut4_I0_O)        0.302    13.352 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry_i_5/O
-                         net (fo=1, routed)           0.000    13.352    fsm_inst/selector_inst_attempt/natural_out0__0_carry_i_5_n_0
-    SLICE_X13Y90         CARRY4 (Prop_carry4_S[2]_O[3])
-                                                      0.352    13.704 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry/O[3]
-                         net (fo=2, routed)           0.744    14.448    fsm_inst/selector_inst_attempt/natural_out0__0_carry_n_4
-    SLICE_X9Y90          LUT4 (Prop_lut4_I0_O)        0.306    14.754 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry_i_4/O
-                         net (fo=1, routed)           0.000    14.754    fsm_inst/selector_inst_attempt/natural_out0__222_carry_i_4_n_0
-    SLICE_X9Y90          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.248    15.002 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry/O[3]
-                         net (fo=3, routed)           0.752    15.755    fsm_inst/selector_inst_attempt/guess[3]
-    SLICE_X13Y90         LUT4 (Prop_lut4_I0_O)        0.306    16.061 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry_i_4/O
-                         net (fo=1, routed)           0.000    16.061    fsm_inst/selector_inst_attempt/natural_out0__0_carry_i_4_n_0
-    SLICE_X13Y90         CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401    16.462 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry/CO[3]
-                         net (fo=1, routed)           0.000    16.462    fsm_inst/selector_inst_attempt/natural_out0__0_carry_n_0
-    SLICE_X13Y91         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.223    16.685 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__0/O[0]
-                         net (fo=2, routed)           0.573    17.258    fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_n_7
-    SLICE_X9Y91          LUT4 (Prop_lut4_I0_O)        0.299    17.557 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__0_i_8/O
-                         net (fo=1, routed)           0.000    17.557    fsm_inst/selector_inst_attempt/natural_out0__222_carry__0_i_8_n_0
-    SLICE_X9Y91          CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247    17.804 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__0/O[0]
-                         net (fo=3, routed)           0.761    18.565    fsm_inst/selector_inst_attempt/guess[4]
-    SLICE_X13Y91         LUT4 (Prop_lut4_I0_O)        0.299    18.864 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_i_8/O
-                         net (fo=1, routed)           0.000    18.864    fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_i_8_n_0
-    SLICE_X13Y91         CARRY4 (Prop_carry4_S[0]_O[1])
-                                                      0.424    19.288 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__0/O[1]
-                         net (fo=2, routed)           0.583    19.871    fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_n_6
-    SLICE_X9Y91          LUT4 (Prop_lut4_I0_O)        0.303    20.174 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__0_i_7/O
-                         net (fo=1, routed)           0.000    20.174    fsm_inst/selector_inst_attempt/natural_out0__222_carry__0_i_7_n_0
-    SLICE_X9Y91          CARRY4 (Prop_carry4_S[1]_O[1])
-                                                      0.227    20.401 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__0/O[1]
-                         net (fo=3, routed)           0.588    20.989    fsm_inst/selector_inst_attempt/guess[5]
-    SLICE_X13Y91         LUT4 (Prop_lut4_I0_O)        0.303    21.292 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_i_7/O
-                         net (fo=1, routed)           0.000    21.292    fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_i_7_n_0
-    SLICE_X13Y91         CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.580    21.872 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__0/O[2]
-                         net (fo=2, routed)           0.973    22.845    fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_n_5
-    SLICE_X9Y91          LUT4 (Prop_lut4_I0_O)        0.302    23.147 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__0_i_6/O
-                         net (fo=1, routed)           0.000    23.147    fsm_inst/selector_inst_attempt/natural_out0__222_carry__0_i_6_n_0
-    SLICE_X9Y91          CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.248    23.395 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__0/O[2]
-                         net (fo=3, routed)           0.819    24.214    fsm_inst/selector_inst_attempt/guess[6]
-    SLICE_X13Y91         LUT4 (Prop_lut4_I0_O)        0.302    24.516 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_i_6/O
-                         net (fo=1, routed)           0.000    24.516    fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_i_6_n_0
-    SLICE_X13Y91         CARRY4 (Prop_carry4_S[2]_O[3])
-                                                      0.352    24.868 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__0/O[3]
-                         net (fo=2, routed)           0.744    25.612    fsm_inst/selector_inst_attempt/natural_out0__0_carry__0_n_4
-    SLICE_X9Y91          LUT3 (Prop_lut3_I0_O)        0.331    25.943 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_4/O
-                         net (fo=2, routed)           0.817    26.760    fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_4_n_0
-    SLICE_X9Y92          LUT4 (Prop_lut4_I3_O)        0.332    27.092 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_8/O
-                         net (fo=1, routed)           0.000    27.092    fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_8_n_0
-    SLICE_X9Y92          CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247    27.339 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__1/O[0]
-                         net (fo=3, routed)           0.975    28.314    fsm_inst/selector_inst_attempt/guess[8]
-    SLICE_X13Y92         LUT3 (Prop_lut3_I0_O)        0.327    28.641 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__1_i_3/O
-                         net (fo=2, routed)           1.228    29.869    fsm_inst/selector_inst_attempt/natural_out0__0_carry__1_i_3_n_0
-    SLICE_X13Y92         LUT4 (Prop_lut4_I3_O)        0.326    30.195 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__1_i_7/O
-                         net (fo=1, routed)           0.000    30.195    fsm_inst/selector_inst_attempt/natural_out0__0_carry__1_i_7_n_0
-    SLICE_X13Y92         CARRY4 (Prop_carry4_S[1]_O[1])
-                                                      0.227    30.422 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__1/O[1]
-                         net (fo=2, routed)           0.576    30.998    fsm_inst/selector_inst_attempt/natural_out0__0_carry__1_n_6
-    SLICE_X9Y92          LUT4 (Prop_lut4_I0_O)        0.303    31.301 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_7/O
-                         net (fo=1, routed)           0.000    31.301    fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_7_n_0
-    SLICE_X9Y92          CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.580    31.881 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__1/O[2]
-                         net (fo=3, routed)           1.126    33.007    fsm_inst/selector_inst_attempt/guess[10]
-    SLICE_X13Y92         LUT4 (Prop_lut4_I0_O)        0.302    33.309 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__1_i_6/O
-                         net (fo=1, routed)           0.000    33.309    fsm_inst/selector_inst_attempt/natural_out0__0_carry__1_i_6_n_0
-    SLICE_X13Y92         CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.248    33.557 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__1/O[2]
-                         net (fo=2, routed)           1.133    34.691    fsm_inst/selector_inst_attempt/natural_out0__0_carry__1_n_5
-    SLICE_X9Y92          LUT4 (Prop_lut4_I0_O)        0.302    34.993 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_6/O
-                         net (fo=1, routed)           0.000    34.993    fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_6_n_0
-    SLICE_X9Y92          CARRY4 (Prop_carry4_S[2]_O[3])
-                                                      0.352    35.345 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__1/O[3]
-                         net (fo=3, routed)           0.914    36.259    fsm_inst/selector_inst_attempt/guess[11]
-    SLICE_X13Y92         LUT3 (Prop_lut3_I0_O)        0.331    36.590 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_i_4/O
-                         net (fo=2, routed)           0.645    37.235    fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_i_4_n_0
-    SLICE_X13Y93         LUT4 (Prop_lut4_I3_O)        0.332    37.567 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_i_8/O
-                         net (fo=1, routed)           0.000    37.567    fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_i_8_n_0
-    SLICE_X13Y93         CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247    37.814 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__2/O[0]
-                         net (fo=2, routed)           0.745    38.560    fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_n_7
-    SLICE_X9Y93          LUT3 (Prop_lut3_I0_O)        0.325    38.885 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__2_i_3/O
-                         net (fo=2, routed)           0.662    39.547    fsm_inst/selector_inst_attempt/natural_out0__222_carry__2_i_3_n_0
-    SLICE_X9Y93          LUT4 (Prop_lut4_I3_O)        0.326    39.873 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__2_i_7/O
-                         net (fo=1, routed)           0.000    39.873    fsm_inst/selector_inst_attempt/natural_out0__222_carry__2_i_7_n_0
-    SLICE_X9Y93          CARRY4 (Prop_carry4_S[1]_O[1])
-                                                      0.227    40.100 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__2/O[1]
-                         net (fo=3, routed)           1.125    41.224    fsm_inst/selector_inst_attempt/guess[13]
-    SLICE_X13Y93         LUT4 (Prop_lut4_I0_O)        0.303    41.527 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_i_7/O
-                         net (fo=1, routed)           0.000    41.527    fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_i_7_n_0
-    SLICE_X13Y93         CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.580    42.107 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__2/O[2]
-                         net (fo=2, routed)           1.101    43.208    fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_n_5
-    SLICE_X9Y93          LUT4 (Prop_lut4_I0_O)        0.302    43.510 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__2_i_6/O
-                         net (fo=1, routed)           0.000    43.510    fsm_inst/selector_inst_attempt/natural_out0__222_carry__2_i_6_n_0
-    SLICE_X9Y93          CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.248    43.758 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__2/O[2]
-                         net (fo=3, routed)           1.134    44.892    fsm_inst/selector_inst_attempt/guess[14]
-    SLICE_X13Y93         LUT4 (Prop_lut4_I0_O)        0.302    45.194 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_i_6/O
-                         net (fo=1, routed)           0.000    45.194    fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_i_6_n_0
-    SLICE_X13Y93         CARRY4 (Prop_carry4_S[2]_O[3])
-                                                      0.352    45.546 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__2/O[3]
-                         net (fo=2, routed)           0.744    46.290    fsm_inst/selector_inst_attempt/natural_out0__0_carry__2_n_4
-    SLICE_X9Y93          LUT3 (Prop_lut3_I0_O)        0.331    46.621 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_4/O
-                         net (fo=2, routed)           0.594    47.215    fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_4_n_0
-    SLICE_X9Y94          LUT4 (Prop_lut4_I3_O)        0.332    47.547 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_8/O
-                         net (fo=1, routed)           0.000    47.547    fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_8_n_0
-    SLICE_X9Y94          CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247    47.794 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__3/O[0]
-                         net (fo=3, routed)           0.770    48.565    fsm_inst/selector_inst_attempt/guess[16]
-    SLICE_X13Y94         LUT3 (Prop_lut3_I0_O)        0.325    48.890 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__3_i_3/O
-                         net (fo=2, routed)           0.666    49.556    fsm_inst/selector_inst_attempt/natural_out0__0_carry__3_i_3_n_0
-    SLICE_X13Y94         LUT4 (Prop_lut4_I3_O)        0.326    49.882 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__3_i_7/O
-                         net (fo=1, routed)           0.000    49.882    fsm_inst/selector_inst_attempt/natural_out0__0_carry__3_i_7_n_0
-    SLICE_X13Y94         CARRY4 (Prop_carry4_S[1]_O[1])
-                                                      0.227    50.109 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__3/O[1]
-                         net (fo=2, routed)           0.985    51.093    fsm_inst/selector_inst_attempt/natural_out0__0_carry__3_n_6
-    SLICE_X9Y94          LUT4 (Prop_lut4_I0_O)        0.303    51.396 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_7/O
-                         net (fo=1, routed)           0.000    51.396    fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_7_n_0
-    SLICE_X9Y94          CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.580    51.976 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__3/O[2]
-                         net (fo=3, routed)           0.606    52.582    fsm_inst/selector_inst_attempt/guess[18]
-    SLICE_X13Y94         LUT4 (Prop_lut4_I0_O)        0.302    52.884 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__3_i_6/O
-                         net (fo=1, routed)           0.000    52.884    fsm_inst/selector_inst_attempt/natural_out0__0_carry__3_i_6_n_0
-    SLICE_X13Y94         CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.248    53.132 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__3/O[2]
-                         net (fo=2, routed)           0.967    54.099    fsm_inst/selector_inst_attempt/natural_out0__0_carry__3_n_5
-    SLICE_X9Y94          LUT4 (Prop_lut4_I0_O)        0.302    54.401 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_6/O
-                         net (fo=1, routed)           0.000    54.401    fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_6_n_0
-    SLICE_X9Y94          CARRY4 (Prop_carry4_S[2]_O[3])
-                                                      0.352    54.753 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__3/O[3]
-                         net (fo=3, routed)           0.734    55.487    fsm_inst/selector_inst_attempt/guess[19]
-    SLICE_X13Y94         LUT3 (Prop_lut3_I0_O)        0.299    55.786 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_i_4/O
-                         net (fo=2, routed)           0.645    56.432    fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_i_4_n_0
-    SLICE_X13Y95         LUT4 (Prop_lut4_I3_O)        0.332    56.764 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_i_8/O
-                         net (fo=1, routed)           0.000    56.764    fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_i_8_n_0
-    SLICE_X13Y95         CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247    57.011 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__4/O[0]
-                         net (fo=2, routed)           0.764    57.774    fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_n_7
-    SLICE_X9Y95          LUT3 (Prop_lut3_I0_O)        0.325    58.099 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_3/O
-                         net (fo=2, routed)           1.011    59.111    fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_3_n_0
-    SLICE_X9Y95          LUT4 (Prop_lut4_I3_O)        0.326    59.437 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_7/O
-                         net (fo=1, routed)           0.000    59.437    fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_7_n_0
-    SLICE_X9Y95          CARRY4 (Prop_carry4_S[1]_O[1])
-                                                      0.227    59.664 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__4/O[1]
-                         net (fo=3, routed)           0.987    60.651    fsm_inst/selector_inst_attempt/guess[21]
-    SLICE_X13Y95         LUT4 (Prop_lut4_I0_O)        0.303    60.954 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_i_7/O
-                         net (fo=1, routed)           0.000    60.954    fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_i_7_n_0
-    SLICE_X13Y95         CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.580    61.534 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__4/O[2]
-                         net (fo=2, routed)           0.967    62.501    fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_n_5
-    SLICE_X9Y95          LUT4 (Prop_lut4_I0_O)        0.302    62.803 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_6/O
-                         net (fo=1, routed)           0.000    62.803    fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_6_n_0
-    SLICE_X9Y95          CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.248    63.051 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__4/O[2]
-                         net (fo=3, routed)           0.981    64.032    fsm_inst/selector_inst_attempt/guess[22]
-    SLICE_X13Y95         LUT4 (Prop_lut4_I0_O)        0.302    64.334 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_i_6/O
-                         net (fo=1, routed)           0.000    64.334    fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_i_6_n_0
-    SLICE_X13Y95         CARRY4 (Prop_carry4_S[2]_O[3])
-                                                      0.352    64.686 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__4/O[3]
-                         net (fo=2, routed)           0.744    65.430    fsm_inst/selector_inst_attempt/natural_out0__0_carry__4_n_4
-    SLICE_X9Y95          LUT4 (Prop_lut4_I0_O)        0.306    65.736 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_5/O
-                         net (fo=1, routed)           0.000    65.736    fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_5_n_0
-    SLICE_X9Y95          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.248    65.984 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__4/O[3]
-                         net (fo=3, routed)           0.963    66.947    fsm_inst/selector_inst_attempt/guess[23]
-    SLICE_X13Y95         LUT3 (Prop_lut3_I0_O)        0.331    67.278 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__5_i_2/O
-                         net (fo=2, routed)           0.645    67.924    fsm_inst/selector_inst_attempt/natural_out0__0_carry__5_i_2_n_0
-    SLICE_X13Y96         LUT4 (Prop_lut4_I3_O)        0.332    68.256 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__5_i_5/O
-                         net (fo=1, routed)           0.000    68.256    fsm_inst/selector_inst_attempt/natural_out0__0_carry__5_i_5_n_0
-    SLICE_X13Y96         CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247    68.503 r  fsm_inst/selector_inst_attempt/natural_out0__0_carry__5/O[0]
-                         net (fo=2, routed)           0.902    69.404    fsm_inst/selector_inst_attempt/natural_out0__0_carry__5_n_7
-    SLICE_X9Y96          LUT3 (Prop_lut3_I0_O)        0.325    69.729 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__5_i_1/O
-                         net (fo=2, routed)           0.727    70.456    fsm_inst/selector_inst_attempt/natural_out0__222_carry__5_i_1_n_0
-    SLICE_X9Y96          CARRY4 (Prop_carry4_DI[1]_O[2])
-                                                      0.739    71.195 r  fsm_inst/selector_inst_attempt/natural_out0__222_carry__5/O[2]
-                         net (fo=2, routed)           0.798    71.993    fsm_inst/selector_inst_password/guess[26]
-    SLICE_X9Y88          LUT6 (Prop_lut6_I4_O)        0.302    72.295 r  fsm_inst/selector_inst_password/FSM_sequential_current_state[1]_i_4/O
-                         net (fo=1, routed)           0.000    72.295    fsm_inst/selector_inst_password/FSM_sequential_current_state[1]_i_4_n_0
-    SLICE_X9Y88          CARRY4 (Prop_carry4_S[0]_CO[0])
-                                                      0.364    72.659 r  fsm_inst/selector_inst_password/FSM_sequential_current_state_reg[1]_i_2/CO[0]
-                         net (fo=2, routed)           1.079    73.738    fsm_inst/selector_inst_password/in2
-    SLICE_X7Y79          LUT4 (Prop_lut4_I1_O)        0.373    74.111 r  fsm_inst/selector_inst_password/FSM_sequential_current_state[0]_i_1/O
-                         net (fo=1, routed)           0.000    74.111    fsm_inst/next_state[0]
-    SLICE_X7Y79          FDCE                                         r  fsm_inst/FSM_sequential_current_state_reg[0]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 fsm_inst/selector_inst_attempt/display_aux_reg[0]/C
+  Source:                 fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[5][15]/R
+  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[6][24]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        14.729ns  (logic 1.401ns (9.512%)  route 13.328ns (90.488%))
-  Logic Levels:           7  (FDCE=1 LUT3=1 LUT5=1 LUT6=4)
+  Data Path Delay:        10.575ns  (logic 1.495ns (14.137%)  route 9.080ns (85.863%))
+  Logic Levels:           6  (FDCE=1 LUT3=1 LUT6=3 MUXF7=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X7Y77          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[0]/C
-    SLICE_X7Y77          FDCE (Prop_fdce_C_Q)         0.456     0.456 r  fsm_inst/selector_inst_attempt/display_aux_reg[0]/Q
-                         net (fo=82, routed)          5.347     5.803    fsm_inst/selector_inst_attempt/display_aux_reg[0]_0
-    SLICE_X1Y97          LUT6 (Prop_lut6_I4_O)        0.124     5.927 f  fsm_inst/selector_inst_attempt/i__carry__3_i_16/O
-                         net (fo=3, routed)           0.714     6.640    fsm_inst/selector_inst_attempt/i__carry__3_i_16_n_0
-    SLICE_X3Y100         LUT3 (Prop_lut3_I2_O)        0.117     6.757 r  fsm_inst/selector_inst_attempt/i__carry__3_i_20/O
-                         net (fo=3, routed)           0.911     7.668    fsm_inst/selector_inst_attempt/i__carry__3_i_8_n_0
-    SLICE_X2Y99          LUT6 (Prop_lut6_I0_O)        0.332     8.000 f  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_14/O
-                         net (fo=4, routed)           1.195     9.195    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_14_n_0
-    SLICE_X5Y91          LUT6 (Prop_lut6_I1_O)        0.124     9.319 f  fsm_inst/selector_inst_attempt/led_code_aux[4][3]_i_2/O
-                         net (fo=6, routed)           1.056    10.375    fsm_inst/selector_inst_attempt/sel0__0[3]
-    SLICE_X5Y88          LUT6 (Prop_lut6_I4_O)        0.124    10.499 r  fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_3/O
-                         net (fo=3, routed)           1.265    11.764    fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_3_n_0
-    SLICE_X3Y90          LUT5 (Prop_lut5_I4_O)        0.124    11.888 r  fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_1/O
-                         net (fo=30, routed)          2.841    14.729    fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_1_n_0
-    SLICE_X11Y100        FDRE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[5][15]/R
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 fsm_inst/selector_inst_attempt/display_aux_reg[0]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[5][16]/R
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        14.729ns  (logic 1.401ns (9.512%)  route 13.328ns (90.488%))
-  Logic Levels:           7  (FDCE=1 LUT3=1 LUT5=1 LUT6=4)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X7Y77          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[0]/C
-    SLICE_X7Y77          FDCE (Prop_fdce_C_Q)         0.456     0.456 r  fsm_inst/selector_inst_attempt/display_aux_reg[0]/Q
-                         net (fo=82, routed)          5.347     5.803    fsm_inst/selector_inst_attempt/display_aux_reg[0]_0
-    SLICE_X1Y97          LUT6 (Prop_lut6_I4_O)        0.124     5.927 f  fsm_inst/selector_inst_attempt/i__carry__3_i_16/O
-                         net (fo=3, routed)           0.714     6.640    fsm_inst/selector_inst_attempt/i__carry__3_i_16_n_0
-    SLICE_X3Y100         LUT3 (Prop_lut3_I2_O)        0.117     6.757 r  fsm_inst/selector_inst_attempt/i__carry__3_i_20/O
-                         net (fo=3, routed)           0.911     7.668    fsm_inst/selector_inst_attempt/i__carry__3_i_8_n_0
-    SLICE_X2Y99          LUT6 (Prop_lut6_I0_O)        0.332     8.000 f  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_14/O
-                         net (fo=4, routed)           1.195     9.195    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_14_n_0
-    SLICE_X5Y91          LUT6 (Prop_lut6_I1_O)        0.124     9.319 f  fsm_inst/selector_inst_attempt/led_code_aux[4][3]_i_2/O
-                         net (fo=6, routed)           1.056    10.375    fsm_inst/selector_inst_attempt/sel0__0[3]
-    SLICE_X5Y88          LUT6 (Prop_lut6_I4_O)        0.124    10.499 r  fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_3/O
-                         net (fo=3, routed)           1.265    11.764    fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_3_n_0
-    SLICE_X3Y90          LUT5 (Prop_lut5_I4_O)        0.124    11.888 r  fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_1/O
-                         net (fo=30, routed)          2.841    14.729    fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_1_n_0
-    SLICE_X11Y100        FDRE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[5][16]/R
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 fsm_inst/selector_inst_attempt/display_aux_reg[0]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[5][21]/R
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        14.423ns  (logic 1.401ns (9.714%)  route 13.022ns (90.286%))
-  Logic Levels:           7  (FDCE=1 LUT3=1 LUT5=1 LUT6=4)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X7Y77          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[0]/C
-    SLICE_X7Y77          FDCE (Prop_fdce_C_Q)         0.456     0.456 r  fsm_inst/selector_inst_attempt/display_aux_reg[0]/Q
-                         net (fo=82, routed)          5.347     5.803    fsm_inst/selector_inst_attempt/display_aux_reg[0]_0
-    SLICE_X1Y97          LUT6 (Prop_lut6_I4_O)        0.124     5.927 f  fsm_inst/selector_inst_attempt/i__carry__3_i_16/O
-                         net (fo=3, routed)           0.714     6.640    fsm_inst/selector_inst_attempt/i__carry__3_i_16_n_0
-    SLICE_X3Y100         LUT3 (Prop_lut3_I2_O)        0.117     6.757 r  fsm_inst/selector_inst_attempt/i__carry__3_i_20/O
-                         net (fo=3, routed)           0.911     7.668    fsm_inst/selector_inst_attempt/i__carry__3_i_8_n_0
-    SLICE_X2Y99          LUT6 (Prop_lut6_I0_O)        0.332     8.000 f  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_14/O
-                         net (fo=4, routed)           1.195     9.195    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_14_n_0
-    SLICE_X5Y91          LUT6 (Prop_lut6_I1_O)        0.124     9.319 f  fsm_inst/selector_inst_attempt/led_code_aux[4][3]_i_2/O
-                         net (fo=6, routed)           1.056    10.375    fsm_inst/selector_inst_attempt/sel0__0[3]
-    SLICE_X5Y88          LUT6 (Prop_lut6_I4_O)        0.124    10.499 r  fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_3/O
-                         net (fo=3, routed)           1.265    11.764    fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_3_n_0
-    SLICE_X3Y90          LUT5 (Prop_lut5_I4_O)        0.124    11.888 r  fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_1/O
-                         net (fo=30, routed)          2.535    14.423    fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_1_n_0
-    SLICE_X10Y103        FDRE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[5][21]/R
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 fsm_inst/selector_inst_attempt/display_aux_reg[0]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[5][24]/R
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        14.197ns  (logic 1.401ns (9.868%)  route 12.796ns (90.132%))
-  Logic Levels:           7  (FDCE=1 LUT3=1 LUT5=1 LUT6=4)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X7Y77          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[0]/C
-    SLICE_X7Y77          FDCE (Prop_fdce_C_Q)         0.456     0.456 r  fsm_inst/selector_inst_attempt/display_aux_reg[0]/Q
-                         net (fo=82, routed)          5.347     5.803    fsm_inst/selector_inst_attempt/display_aux_reg[0]_0
-    SLICE_X1Y97          LUT6 (Prop_lut6_I4_O)        0.124     5.927 f  fsm_inst/selector_inst_attempt/i__carry__3_i_16/O
-                         net (fo=3, routed)           0.714     6.640    fsm_inst/selector_inst_attempt/i__carry__3_i_16_n_0
-    SLICE_X3Y100         LUT3 (Prop_lut3_I2_O)        0.117     6.757 r  fsm_inst/selector_inst_attempt/i__carry__3_i_20/O
-                         net (fo=3, routed)           0.911     7.668    fsm_inst/selector_inst_attempt/i__carry__3_i_8_n_0
-    SLICE_X2Y99          LUT6 (Prop_lut6_I0_O)        0.332     8.000 f  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_14/O
-                         net (fo=4, routed)           1.195     9.195    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_14_n_0
-    SLICE_X5Y91          LUT6 (Prop_lut6_I1_O)        0.124     9.319 f  fsm_inst/selector_inst_attempt/led_code_aux[4][3]_i_2/O
-                         net (fo=6, routed)           1.056    10.375    fsm_inst/selector_inst_attempt/sel0__0[3]
-    SLICE_X5Y88          LUT6 (Prop_lut6_I4_O)        0.124    10.499 r  fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_3/O
-                         net (fo=3, routed)           1.265    11.764    fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_3_n_0
-    SLICE_X3Y90          LUT5 (Prop_lut5_I4_O)        0.124    11.888 r  fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_1/O
-                         net (fo=30, routed)          2.309    14.197    fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_1_n_0
-    SLICE_X0Y103         FDRE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[5][24]/R
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 fsm_inst/selector_inst_attempt/display_aux_reg[0]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[5][27]/R
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        14.043ns  (logic 1.401ns (9.976%)  route 12.642ns (90.024%))
-  Logic Levels:           7  (FDCE=1 LUT3=1 LUT5=1 LUT6=4)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X7Y77          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[0]/C
-    SLICE_X7Y77          FDCE (Prop_fdce_C_Q)         0.456     0.456 r  fsm_inst/selector_inst_attempt/display_aux_reg[0]/Q
-                         net (fo=82, routed)          5.347     5.803    fsm_inst/selector_inst_attempt/display_aux_reg[0]_0
-    SLICE_X1Y97          LUT6 (Prop_lut6_I4_O)        0.124     5.927 f  fsm_inst/selector_inst_attempt/i__carry__3_i_16/O
-                         net (fo=3, routed)           0.714     6.640    fsm_inst/selector_inst_attempt/i__carry__3_i_16_n_0
-    SLICE_X3Y100         LUT3 (Prop_lut3_I2_O)        0.117     6.757 r  fsm_inst/selector_inst_attempt/i__carry__3_i_20/O
-                         net (fo=3, routed)           0.911     7.668    fsm_inst/selector_inst_attempt/i__carry__3_i_8_n_0
-    SLICE_X2Y99          LUT6 (Prop_lut6_I0_O)        0.332     8.000 f  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_14/O
-                         net (fo=4, routed)           1.195     9.195    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_14_n_0
-    SLICE_X5Y91          LUT6 (Prop_lut6_I1_O)        0.124     9.319 f  fsm_inst/selector_inst_attempt/led_code_aux[4][3]_i_2/O
-                         net (fo=6, routed)           1.056    10.375    fsm_inst/selector_inst_attempt/sel0__0[3]
-    SLICE_X5Y88          LUT6 (Prop_lut6_I4_O)        0.124    10.499 r  fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_3/O
-                         net (fo=3, routed)           1.265    11.764    fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_3_n_0
-    SLICE_X3Y90          LUT5 (Prop_lut5_I4_O)        0.124    11.888 r  fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_1/O
-                         net (fo=30, routed)          2.155    14.043    fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_1_n_0
-    SLICE_X4Y103         FDRE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[5][27]/R
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 fsm_inst/selector_inst_attempt/display_aux_reg[0]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[5][29]/R
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        14.043ns  (logic 1.401ns (9.976%)  route 12.642ns (90.024%))
-  Logic Levels:           7  (FDCE=1 LUT3=1 LUT5=1 LUT6=4)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X7Y77          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[0]/C
-    SLICE_X7Y77          FDCE (Prop_fdce_C_Q)         0.456     0.456 r  fsm_inst/selector_inst_attempt/display_aux_reg[0]/Q
-                         net (fo=82, routed)          5.347     5.803    fsm_inst/selector_inst_attempt/display_aux_reg[0]_0
-    SLICE_X1Y97          LUT6 (Prop_lut6_I4_O)        0.124     5.927 f  fsm_inst/selector_inst_attempt/i__carry__3_i_16/O
-                         net (fo=3, routed)           0.714     6.640    fsm_inst/selector_inst_attempt/i__carry__3_i_16_n_0
-    SLICE_X3Y100         LUT3 (Prop_lut3_I2_O)        0.117     6.757 r  fsm_inst/selector_inst_attempt/i__carry__3_i_20/O
-                         net (fo=3, routed)           0.911     7.668    fsm_inst/selector_inst_attempt/i__carry__3_i_8_n_0
-    SLICE_X2Y99          LUT6 (Prop_lut6_I0_O)        0.332     8.000 f  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_14/O
-                         net (fo=4, routed)           1.195     9.195    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_14_n_0
-    SLICE_X5Y91          LUT6 (Prop_lut6_I1_O)        0.124     9.319 f  fsm_inst/selector_inst_attempt/led_code_aux[4][3]_i_2/O
-                         net (fo=6, routed)           1.056    10.375    fsm_inst/selector_inst_attempt/sel0__0[3]
-    SLICE_X5Y88          LUT6 (Prop_lut6_I4_O)        0.124    10.499 r  fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_3/O
-                         net (fo=3, routed)           1.265    11.764    fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_3_n_0
-    SLICE_X3Y90          LUT5 (Prop_lut5_I4_O)        0.124    11.888 r  fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_1/O
-                         net (fo=30, routed)          2.155    14.043    fsm_inst/selector_inst_attempt/led_code_aux[5][31]_i_1_n_0
-    SLICE_X4Y103         FDRE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[5][29]/R
+    SLICE_X8Y86          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+    SLICE_X8Y86          FDCE (Prop_fdce_C_Q)         0.518     0.518 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/Q
+                         net (fo=82, routed)          2.852     3.370    fsm_inst/selector_inst_attempt/display_aux[1]
+    SLICE_X28Y92         LUT6 (Prop_lut6_I2_O)        0.124     3.494 r  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10/O
+                         net (fo=2, routed)           1.416     4.910    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10_n_0
+    SLICE_X12Y94         LUT3 (Prop_lut3_I2_O)        0.153     5.063 f  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_5/O
+                         net (fo=2, routed)           1.008     6.071    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_1_n_0
+    SLICE_X14Y95         LUT6 (Prop_lut6_I1_O)        0.331     6.402 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0/O
+                         net (fo=64, routed)          2.400     8.802    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0_n_0
+    SLICE_X11Y95         LUT6 (Prop_lut6_I2_O)        0.124     8.926 r  fsm_inst/selector_inst_attempt/led_code_aux[7][24]_i_3__0/O
+                         net (fo=1, routed)           0.000     8.926    fsm_inst/selector_inst_attempt/led_code_aux[0][24]
+    SLICE_X11Y95         MUXF7 (Prop_muxf7_I1_O)      0.245     9.171 r  fsm_inst/selector_inst_attempt/led_code_aux_reg[7][24]_i_1__0/O
+                         net (fo=8, routed)           1.403    10.575    fsm_inst/selector_inst_attempt/led_code_aux[0]0_in[24]
+    SLICE_X11Y99         FDCE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[6][24]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[7][20]/CE
+  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[5][24]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        13.996ns  (logic 1.272ns (9.088%)  route 12.724ns (90.912%))
-  Logic Levels:           6  (FDCE=1 LUT5=1 LUT6=4)
+  Data Path Delay:        10.545ns  (logic 1.495ns (14.177%)  route 9.050ns (85.823%))
+  Logic Levels:           6  (FDCE=1 LUT3=1 LUT6=3 MUXF7=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X7Y77          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
-    SLICE_X7Y77          FDCE (Prop_fdce_C_Q)         0.456     0.456 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/Q
-                         net (fo=81, routed)          5.195     5.651    fsm_inst/selector_inst_attempt/sel0__1[1]
-    SLICE_X9Y103         LUT6 (Prop_lut6_I3_O)        0.124     5.775 r  fsm_inst/selector_inst_attempt/i__carry__4_i_13/O
-                         net (fo=4, routed)           1.136     6.911    fsm_inst/selector_inst_attempt/i__carry__4_i_13_n_0
-    SLICE_X3Y102         LUT5 (Prop_lut5_I4_O)        0.118     7.029 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_21/O
-                         net (fo=1, routed)           0.655     7.684    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_21_n_0
-    SLICE_X2Y98          LUT6 (Prop_lut6_I0_O)        0.326     8.010 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_13/O
-                         net (fo=2, routed)           1.010     9.020    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_13_n_0
-    SLICE_X5Y91          LUT6 (Prop_lut6_I2_O)        0.124     9.144 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_8/O
-                         net (fo=33, routed)          1.145    10.289    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_8_n_0
-    SLICE_X2Y90          LUT6 (Prop_lut6_I4_O)        0.124    10.413 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_2/O
-                         net (fo=32, routed)          3.584    13.996    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_2_n_0
-    SLICE_X9Y103         FDRE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[7][20]/CE
+    SLICE_X8Y86          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+    SLICE_X8Y86          FDCE (Prop_fdce_C_Q)         0.518     0.518 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/Q
+                         net (fo=82, routed)          2.852     3.370    fsm_inst/selector_inst_attempt/display_aux[1]
+    SLICE_X28Y92         LUT6 (Prop_lut6_I2_O)        0.124     3.494 r  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10/O
+                         net (fo=2, routed)           1.416     4.910    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10_n_0
+    SLICE_X12Y94         LUT3 (Prop_lut3_I2_O)        0.153     5.063 f  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_5/O
+                         net (fo=2, routed)           1.008     6.071    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_1_n_0
+    SLICE_X14Y95         LUT6 (Prop_lut6_I1_O)        0.331     6.402 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0/O
+                         net (fo=64, routed)          2.400     8.802    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0_n_0
+    SLICE_X11Y95         LUT6 (Prop_lut6_I2_O)        0.124     8.926 r  fsm_inst/selector_inst_attempt/led_code_aux[7][24]_i_3__0/O
+                         net (fo=1, routed)           0.000     8.926    fsm_inst/selector_inst_attempt/led_code_aux[0][24]
+    SLICE_X11Y95         MUXF7 (Prop_muxf7_I1_O)      0.245     9.171 r  fsm_inst/selector_inst_attempt/led_code_aux_reg[7][24]_i_1__0/O
+                         net (fo=8, routed)           1.374    10.545    fsm_inst/selector_inst_attempt/led_code_aux[0]0_in[24]
+    SLICE_X13Y98         FDCE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[5][24]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[7][22]/CE
+  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[7][24]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        13.996ns  (logic 1.272ns (9.088%)  route 12.724ns (90.912%))
-  Logic Levels:           6  (FDCE=1 LUT5=1 LUT6=4)
+  Data Path Delay:        10.434ns  (logic 1.495ns (14.328%)  route 8.939ns (85.672%))
+  Logic Levels:           6  (FDCE=1 LUT3=1 LUT6=3 MUXF7=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X7Y77          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
-    SLICE_X7Y77          FDCE (Prop_fdce_C_Q)         0.456     0.456 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/Q
-                         net (fo=81, routed)          5.195     5.651    fsm_inst/selector_inst_attempt/sel0__1[1]
-    SLICE_X9Y103         LUT6 (Prop_lut6_I3_O)        0.124     5.775 r  fsm_inst/selector_inst_attempt/i__carry__4_i_13/O
-                         net (fo=4, routed)           1.136     6.911    fsm_inst/selector_inst_attempt/i__carry__4_i_13_n_0
-    SLICE_X3Y102         LUT5 (Prop_lut5_I4_O)        0.118     7.029 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_21/O
-                         net (fo=1, routed)           0.655     7.684    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_21_n_0
-    SLICE_X2Y98          LUT6 (Prop_lut6_I0_O)        0.326     8.010 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_13/O
-                         net (fo=2, routed)           1.010     9.020    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_13_n_0
-    SLICE_X5Y91          LUT6 (Prop_lut6_I2_O)        0.124     9.144 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_8/O
-                         net (fo=33, routed)          1.145    10.289    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_8_n_0
-    SLICE_X2Y90          LUT6 (Prop_lut6_I4_O)        0.124    10.413 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_2/O
-                         net (fo=32, routed)          3.584    13.996    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_2_n_0
-    SLICE_X9Y103         FDRE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[7][22]/CE
+    SLICE_X8Y86          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+    SLICE_X8Y86          FDCE (Prop_fdce_C_Q)         0.518     0.518 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/Q
+                         net (fo=82, routed)          2.852     3.370    fsm_inst/selector_inst_attempt/display_aux[1]
+    SLICE_X28Y92         LUT6 (Prop_lut6_I2_O)        0.124     3.494 r  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10/O
+                         net (fo=2, routed)           1.416     4.910    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10_n_0
+    SLICE_X12Y94         LUT3 (Prop_lut3_I2_O)        0.153     5.063 f  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_5/O
+                         net (fo=2, routed)           1.008     6.071    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_1_n_0
+    SLICE_X14Y95         LUT6 (Prop_lut6_I1_O)        0.331     6.402 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0/O
+                         net (fo=64, routed)          2.400     8.802    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0_n_0
+    SLICE_X11Y95         LUT6 (Prop_lut6_I2_O)        0.124     8.926 r  fsm_inst/selector_inst_attempt/led_code_aux[7][24]_i_3__0/O
+                         net (fo=1, routed)           0.000     8.926    fsm_inst/selector_inst_attempt/led_code_aux[0][24]
+    SLICE_X11Y95         MUXF7 (Prop_muxf7_I1_O)      0.245     9.171 r  fsm_inst/selector_inst_attempt/led_code_aux_reg[7][24]_i_1__0/O
+                         net (fo=8, routed)           1.263    10.434    fsm_inst/selector_inst_attempt/led_code_aux[0]0_in[24]
+    SLICE_X10Y98         FDCE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[7][24]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[2][22]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.350ns  (logic 1.467ns (14.174%)  route 8.883ns (85.826%))
+  Logic Levels:           6  (FDCE=1 LUT3=1 LUT6=3 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y86          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+    SLICE_X8Y86          FDCE (Prop_fdce_C_Q)         0.518     0.518 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/Q
+                         net (fo=82, routed)          2.852     3.370    fsm_inst/selector_inst_attempt/display_aux[1]
+    SLICE_X28Y92         LUT6 (Prop_lut6_I2_O)        0.124     3.494 r  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10/O
+                         net (fo=2, routed)           1.416     4.910    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10_n_0
+    SLICE_X12Y94         LUT3 (Prop_lut3_I2_O)        0.153     5.063 f  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_5/O
+                         net (fo=2, routed)           1.008     6.071    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_1_n_0
+    SLICE_X14Y95         LUT6 (Prop_lut6_I1_O)        0.331     6.402 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0/O
+                         net (fo=64, routed)          2.417     8.819    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0_n_0
+    SLICE_X11Y95         LUT6 (Prop_lut6_I2_O)        0.124     8.943 r  fsm_inst/selector_inst_attempt/led_code_aux[7][22]_i_3__0/O
+                         net (fo=1, routed)           0.000     8.943    fsm_inst/selector_inst_attempt/led_code_aux[0][22]
+    SLICE_X11Y95         MUXF7 (Prop_muxf7_I1_O)      0.217     9.160 r  fsm_inst/selector_inst_attempt/led_code_aux_reg[7][22]_i_1__0/O
+                         net (fo=8, routed)           1.190    10.350    fsm_inst/selector_inst_attempt/led_code_aux[0]0_in[22]
+    SLICE_X13Y97         FDCE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[2][22]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[4][24]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.295ns  (logic 1.495ns (14.521%)  route 8.800ns (85.479%))
+  Logic Levels:           6  (FDCE=1 LUT3=1 LUT6=3 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y86          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+    SLICE_X8Y86          FDCE (Prop_fdce_C_Q)         0.518     0.518 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/Q
+                         net (fo=82, routed)          2.852     3.370    fsm_inst/selector_inst_attempt/display_aux[1]
+    SLICE_X28Y92         LUT6 (Prop_lut6_I2_O)        0.124     3.494 r  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10/O
+                         net (fo=2, routed)           1.416     4.910    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10_n_0
+    SLICE_X12Y94         LUT3 (Prop_lut3_I2_O)        0.153     5.063 f  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_5/O
+                         net (fo=2, routed)           1.008     6.071    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_1_n_0
+    SLICE_X14Y95         LUT6 (Prop_lut6_I1_O)        0.331     6.402 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0/O
+                         net (fo=64, routed)          2.400     8.802    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0_n_0
+    SLICE_X11Y95         LUT6 (Prop_lut6_I2_O)        0.124     8.926 r  fsm_inst/selector_inst_attempt/led_code_aux[7][24]_i_3__0/O
+                         net (fo=1, routed)           0.000     8.926    fsm_inst/selector_inst_attempt/led_code_aux[0][24]
+    SLICE_X11Y95         MUXF7 (Prop_muxf7_I1_O)      0.245     9.171 r  fsm_inst/selector_inst_attempt/led_code_aux_reg[7][24]_i_1__0/O
+                         net (fo=8, routed)           1.124    10.295    fsm_inst/selector_inst_attempt/led_code_aux[0]0_in[24]
+    SLICE_X11Y98         FDCE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[4][24]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[5][30]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.266ns  (logic 2.723ns (26.526%)  route 7.543ns (73.474%))
+  Logic Levels:           10  (CARRY4=5 FDCE=1 LUT3=1 LUT6=2 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y86          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+    SLICE_X8Y86          FDCE (Prop_fdce_C_Q)         0.518     0.518 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/Q
+                         net (fo=82, routed)          2.958     3.476    fsm_inst/selector_inst_attempt/display_aux[1]
+    SLICE_X28Y91         LUT6 (Prop_lut6_I2_O)        0.124     3.600 f  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__2_i_10/O
+                         net (fo=2, routed)           1.425     5.025    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__2_i_10_n_0
+    SLICE_X12Y93         LUT3 (Prop_lut3_I2_O)        0.153     5.178 r  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__2_i_5/O
+                         net (fo=2, routed)           0.640     5.818    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__2_i_1_n_0
+    SLICE_X12Y93         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.707     6.525 r  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     6.525    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__2_n_0
+    SLICE_X12Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.642 r  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     6.642    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_n_0
+    SLICE_X12Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.759 r  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     6.759    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__4_n_0
+    SLICE_X12Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.876 r  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__5/CO[3]
+                         net (fo=1, routed)           0.000     6.876    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__5_n_0
+    SLICE_X12Y97         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     7.199 r  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__6/O[1]
+                         net (fo=1, routed)           0.820     8.019    fsm_inst/selector_inst_attempt/led_code_aux[7]0[30]
+    SLICE_X14Y97         LUT6 (Prop_lut6_I5_O)        0.306     8.325 r  fsm_inst/selector_inst_attempt/led_code_aux[7][30]_i_2__0/O
+                         net (fo=1, routed)           0.000     8.325    fsm_inst/selector_inst_attempt/led_code_aux[7][30]_i_2__0_n_0
+    SLICE_X14Y97         MUXF7 (Prop_muxf7_I0_O)      0.241     8.566 r  fsm_inst/selector_inst_attempt/led_code_aux_reg[7][30]_i_1__0/O
+                         net (fo=8, routed)           1.700    10.266    fsm_inst/selector_inst_attempt/led_code_aux[0]0_in[30]
+    SLICE_X13Y98         FDCE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[5][30]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[0][22]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.255ns  (logic 1.467ns (14.305%)  route 8.788ns (85.695%))
+  Logic Levels:           6  (FDCE=1 LUT3=1 LUT6=3 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y86          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+    SLICE_X8Y86          FDCE (Prop_fdce_C_Q)         0.518     0.518 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/Q
+                         net (fo=82, routed)          2.852     3.370    fsm_inst/selector_inst_attempt/display_aux[1]
+    SLICE_X28Y92         LUT6 (Prop_lut6_I2_O)        0.124     3.494 r  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10/O
+                         net (fo=2, routed)           1.416     4.910    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10_n_0
+    SLICE_X12Y94         LUT3 (Prop_lut3_I2_O)        0.153     5.063 f  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_5/O
+                         net (fo=2, routed)           1.008     6.071    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_1_n_0
+    SLICE_X14Y95         LUT6 (Prop_lut6_I1_O)        0.331     6.402 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0/O
+                         net (fo=64, routed)          2.417     8.819    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0_n_0
+    SLICE_X11Y95         LUT6 (Prop_lut6_I2_O)        0.124     8.943 r  fsm_inst/selector_inst_attempt/led_code_aux[7][22]_i_3__0/O
+                         net (fo=1, routed)           0.000     8.943    fsm_inst/selector_inst_attempt/led_code_aux[0][22]
+    SLICE_X11Y95         MUXF7 (Prop_muxf7_I1_O)      0.217     9.160 r  fsm_inst/selector_inst_attempt/led_code_aux_reg[7][22]_i_1__0/O
+                         net (fo=8, routed)           1.095    10.255    fsm_inst/selector_inst_attempt/led_code_aux[0]0_in[22]
+    SLICE_X14Y98         FDCE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[0][22]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[5][0]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.236ns  (logic 1.464ns (14.303%)  route 8.772ns (85.697%))
+  Logic Levels:           6  (FDCE=1 LUT3=1 LUT6=3 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y86          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+    SLICE_X8Y86          FDCE (Prop_fdce_C_Q)         0.518     0.518 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/Q
+                         net (fo=82, routed)          2.852     3.370    fsm_inst/selector_inst_attempt/display_aux[1]
+    SLICE_X28Y92         LUT6 (Prop_lut6_I2_O)        0.124     3.494 r  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10/O
+                         net (fo=2, routed)           1.416     4.910    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10_n_0
+    SLICE_X12Y94         LUT3 (Prop_lut3_I2_O)        0.153     5.063 f  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_5/O
+                         net (fo=2, routed)           1.008     6.071    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_1_n_0
+    SLICE_X14Y95         LUT6 (Prop_lut6_I1_O)        0.331     6.402 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0/O
+                         net (fo=64, routed)          1.757     8.159    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0_n_0
+    SLICE_X14Y89         LUT6 (Prop_lut6_I2_O)        0.124     8.283 r  fsm_inst/selector_inst_attempt/led_code_aux[7][0]_i_3__0/O
+                         net (fo=1, routed)           0.000     8.283    fsm_inst/selector_inst_attempt/led_code_aux[7][0]_i_3__0_n_0
+    SLICE_X14Y89         MUXF7 (Prop_muxf7_I1_O)      0.214     8.497 r  fsm_inst/selector_inst_attempt/led_code_aux_reg[7][0]_i_1__0/O
+                         net (fo=8, routed)           1.738    10.236    fsm_inst/selector_inst_attempt/led_code_aux[0]0_in[0]
+    SLICE_X12Y87         FDCE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[5][0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[3][24]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.173ns  (logic 1.495ns (14.696%)  route 8.678ns (85.304%))
+  Logic Levels:           6  (FDCE=1 LUT3=1 LUT6=3 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y86          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+    SLICE_X8Y86          FDCE (Prop_fdce_C_Q)         0.518     0.518 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/Q
+                         net (fo=82, routed)          2.852     3.370    fsm_inst/selector_inst_attempt/display_aux[1]
+    SLICE_X28Y92         LUT6 (Prop_lut6_I2_O)        0.124     3.494 r  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10/O
+                         net (fo=2, routed)           1.416     4.910    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10_n_0
+    SLICE_X12Y94         LUT3 (Prop_lut3_I2_O)        0.153     5.063 f  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_5/O
+                         net (fo=2, routed)           1.008     6.071    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_1_n_0
+    SLICE_X14Y95         LUT6 (Prop_lut6_I1_O)        0.331     6.402 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0/O
+                         net (fo=64, routed)          2.400     8.802    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0_n_0
+    SLICE_X11Y95         LUT6 (Prop_lut6_I2_O)        0.124     8.926 r  fsm_inst/selector_inst_attempt/led_code_aux[7][24]_i_3__0/O
+                         net (fo=1, routed)           0.000     8.926    fsm_inst/selector_inst_attempt/led_code_aux[0][24]
+    SLICE_X11Y95         MUXF7 (Prop_muxf7_I1_O)      0.245     9.171 r  fsm_inst/selector_inst_attempt/led_code_aux_reg[7][24]_i_1__0/O
+                         net (fo=8, routed)           1.001    10.173    fsm_inst/selector_inst_attempt/led_code_aux[0]0_in[24]
+    SLICE_X10Y95         FDCE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[3][24]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[2][24]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.143ns  (logic 1.495ns (14.739%)  route 8.648ns (85.261%))
+  Logic Levels:           6  (FDCE=1 LUT3=1 LUT6=3 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y86          FDCE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/C
+    SLICE_X8Y86          FDCE (Prop_fdce_C_Q)         0.518     0.518 r  fsm_inst/selector_inst_attempt/display_aux_reg[1]/Q
+                         net (fo=82, routed)          2.852     3.370    fsm_inst/selector_inst_attempt/display_aux[1]
+    SLICE_X28Y92         LUT6 (Prop_lut6_I2_O)        0.124     3.494 r  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10/O
+                         net (fo=2, routed)           1.416     4.910    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_10_n_0
+    SLICE_X12Y94         LUT3 (Prop_lut3_I2_O)        0.153     5.063 f  fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_5/O
+                         net (fo=2, routed)           1.008     6.071    fsm_inst/selector_inst_attempt/led_code_aux[7]0_carry__3_i_1_n_0
+    SLICE_X14Y95         LUT6 (Prop_lut6_I1_O)        0.331     6.402 r  fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0/O
+                         net (fo=64, routed)          2.400     8.802    fsm_inst/selector_inst_attempt/led_code_aux[7][31]_i_7__0_n_0
+    SLICE_X11Y95         LUT6 (Prop_lut6_I2_O)        0.124     8.926 r  fsm_inst/selector_inst_attempt/led_code_aux[7][24]_i_3__0/O
+                         net (fo=1, routed)           0.000     8.926    fsm_inst/selector_inst_attempt/led_code_aux[0][24]
+    SLICE_X11Y95         MUXF7 (Prop_muxf7_I1_O)      0.245     9.171 r  fsm_inst/selector_inst_attempt/led_code_aux_reg[7][24]_i_1__0/O
+                         net (fo=8, routed)           0.972    10.143    fsm_inst/selector_inst_attempt/led_code_aux[0]0_in[24]
+    SLICE_X11Y96         FDCE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[2][24]/D
   -------------------------------------------------------------------    -------------------
 
 
@@ -917,161 +515,107 @@ Slack:                    inf
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
+  Source:                 DOWN_BTN_INST/BUTTON_PRESSED_VAR_reg/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            DOWN_BTN_INST/SYNC_OUT_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.326ns  (logic 0.209ns (64.017%)  route 0.117ns (35.983%))
+  Logic Levels:           2  (FDRE=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y81          FDRE                         0.000     0.000 r  DOWN_BTN_INST/BUTTON_PRESSED_VAR_reg/C
+    SLICE_X6Y81          FDRE (Prop_fdre_C_Q)         0.164     0.164 f  DOWN_BTN_INST/BUTTON_PRESSED_VAR_reg/Q
+                         net (fo=5, routed)           0.117     0.281    DOWN_BTN_INST/BUTTON_PRESSED_VAR_reg_n_0
+    SLICE_X7Y81          LUT2 (Prop_lut2_I1_O)        0.045     0.326 r  DOWN_BTN_INST/SYNC_OUT_i_1__1/O
+                         net (fo=1, routed)           0.000     0.326    DOWN_BTN_INST/SYNC_OUT0
+    SLICE_X7Y81          FDRE                                         r  DOWN_BTN_INST/SYNC_OUT_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
   Source:                 Blinker_inst/BLINKING_CLK_reg/C
                             (rising edge-triggered cell FDRE)
   Destination:            Blinker_inst/BLINKING_CLK_reg/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.354ns  (logic 0.186ns (52.507%)  route 0.168ns (47.493%))
+  Data Path Delay:        0.354ns  (logic 0.186ns (52.498%)  route 0.168ns (47.502%))
   Logic Levels:           2  (FDRE=1 LUT2=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X5Y78          FDRE                         0.000     0.000 r  Blinker_inst/BLINKING_CLK_reg/C
-    SLICE_X5Y78          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Blinker_inst/BLINKING_CLK_reg/Q
+    SLICE_X3Y87          FDRE                         0.000     0.000 r  Blinker_inst/BLINKING_CLK_reg/C
+    SLICE_X3Y87          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Blinker_inst/BLINKING_CLK_reg/Q
                          net (fo=2, routed)           0.168     0.309    Blinker_inst/BLINKING_CLK
-    SLICE_X5Y78          LUT2 (Prop_lut2_I1_O)        0.045     0.354 r  Blinker_inst/BLINKING_CLK_i_1/O
+    SLICE_X3Y87          LUT2 (Prop_lut2_I1_O)        0.045     0.354 r  Blinker_inst/BLINKING_CLK_i_1/O
                          net (fo=1, routed)           0.000     0.354    Blinker_inst/BLINKING_CLK_0
-    SLICE_X5Y78          FDRE                                         r  Blinker_inst/BLINKING_CLK_reg/D
+    SLICE_X3Y87          FDRE                                         r  Blinker_inst/BLINKING_CLK_reg/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 OK_BTN_INST/BUTTON_PRESSED_VAR_reg/C
+  Source:                 DOWN_BTN_INST/COUNTER_reg[7]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            OK_BTN_INST/SYNC_OUT_reg/D
+  Destination:            DOWN_BTN_INST/COUNTER_reg[7]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.363ns  (logic 0.183ns (50.361%)  route 0.180ns (49.639%))
-  Logic Levels:           2  (FDRE=1 LUT2=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X1Y73          FDRE                         0.000     0.000 r  OK_BTN_INST/BUTTON_PRESSED_VAR_reg/C
-    SLICE_X1Y73          FDRE (Prop_fdre_C_Q)         0.141     0.141 f  OK_BTN_INST/BUTTON_PRESSED_VAR_reg/Q
-                         net (fo=4, routed)           0.180     0.321    OK_BTN_INST/BUTTON_PRESSED_VAR
-    SLICE_X1Y73          LUT2 (Prop_lut2_I1_O)        0.042     0.363 r  OK_BTN_INST/SYNC_OUT_i_1/O
-                         net (fo=1, routed)           0.000     0.363    OK_BTN_INST/SYNC_OUT0
-    SLICE_X1Y73          FDRE                                         r  OK_BTN_INST/SYNC_OUT_reg/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 UP_BTN_INST/BUTTON_PRESSED_VAR_reg/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            UP_BTN_INST/BUTTON_PRESSED_VAR_reg/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.365ns  (logic 0.186ns (50.911%)  route 0.179ns (49.089%))
-  Logic Levels:           2  (FDRE=1 LUT5=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y74          FDRE                         0.000     0.000 r  UP_BTN_INST/BUTTON_PRESSED_VAR_reg/C
-    SLICE_X3Y74          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  UP_BTN_INST/BUTTON_PRESSED_VAR_reg/Q
-                         net (fo=4, routed)           0.179     0.320    UP_BTN_INST/BUTTON_PRESSED_VAR
-    SLICE_X3Y74          LUT5 (Prop_lut5_I4_O)        0.045     0.365 r  UP_BTN_INST/BUTTON_PRESSED_VAR_i_1__0/O
-                         net (fo=1, routed)           0.000     0.365    UP_BTN_INST/BUTTON_PRESSED_VAR_i_1__0_n_0
-    SLICE_X3Y74          FDRE                                         r  UP_BTN_INST/BUTTON_PRESSED_VAR_reg/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 DISPLAY_MUX_inst/DISPLAY_CODE_OUT_reg[0]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Blinker_inst/LED_CODE_OUT_reg[0]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.365ns  (logic 0.141ns (38.578%)  route 0.224ns (61.422%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X7Y80          FDRE                         0.000     0.000 r  DISPLAY_MUX_inst/DISPLAY_CODE_OUT_reg[0]/C
-    SLICE_X7Y80          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  DISPLAY_MUX_inst/DISPLAY_CODE_OUT_reg[0]/Q
-                         net (fo=1, routed)           0.224     0.365    Blinker_inst/LED_CODE_OUT_reg[4]_0[0]
-    SLICE_X4Y77          FDSE                                         r  Blinker_inst/LED_CODE_OUT_reg[0]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Blinker_inst/COUNT_reg[12]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Blinker_inst/COUNT_reg[12]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.366ns  (logic 0.249ns (68.025%)  route 0.117ns (31.975%))
+  Data Path Delay:        0.366ns  (logic 0.249ns (67.994%)  route 0.117ns (32.006%))
   Logic Levels:           2  (CARRY4=1 FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X9Y73          FDRE                         0.000     0.000 r  Blinker_inst/COUNT_reg[12]/C
-    SLICE_X9Y73          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Blinker_inst/COUNT_reg[12]/Q
-                         net (fo=2, routed)           0.117     0.258    Blinker_inst/COUNT[12]
-    SLICE_X9Y73          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.108     0.366 r  Blinker_inst/COUNT0_carry__1/O[3]
-                         net (fo=1, routed)           0.000     0.366    Blinker_inst/p_1_in[12]
-    SLICE_X9Y73          FDRE                                         r  Blinker_inst/COUNT_reg[12]/D
+    SLICE_X5Y80          FDRE                         0.000     0.000 r  DOWN_BTN_INST/COUNTER_reg[7]/C
+    SLICE_X5Y80          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  DOWN_BTN_INST/COUNTER_reg[7]/Q
+                         net (fo=2, routed)           0.117     0.258    DOWN_BTN_INST/COUNTER_reg[7]
+    SLICE_X5Y80          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.366 r  DOWN_BTN_INST/COUNTER_reg[4]_i_1__1/O[3]
+                         net (fo=1, routed)           0.000     0.366    DOWN_BTN_INST/COUNTER_reg[4]_i_1__1_n_4
+    SLICE_X5Y80          FDRE                                         r  DOWN_BTN_INST/COUNTER_reg[7]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 Blinker_inst/COUNT_reg[20]/C
+  Source:                 OK_BTN_INST/COUNTER_reg[11]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            Blinker_inst/COUNT_reg[20]/D
+  Destination:            OK_BTN_INST/COUNTER_reg[11]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.366ns  (logic 0.249ns (68.025%)  route 0.117ns (31.975%))
+  Data Path Delay:        0.366ns  (logic 0.249ns (67.994%)  route 0.117ns (32.006%))
   Logic Levels:           2  (CARRY4=1 FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X9Y75          FDRE                         0.000     0.000 r  Blinker_inst/COUNT_reg[20]/C
-    SLICE_X9Y75          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Blinker_inst/COUNT_reg[20]/Q
-                         net (fo=2, routed)           0.117     0.258    Blinker_inst/COUNT[20]
-    SLICE_X9Y75          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.108     0.366 r  Blinker_inst/COUNT0_carry__3/O[3]
-                         net (fo=1, routed)           0.000     0.366    Blinker_inst/p_1_in[20]
-    SLICE_X9Y75          FDRE                                         r  Blinker_inst/COUNT_reg[20]/D
+    SLICE_X3Y81          FDRE                         0.000     0.000 r  OK_BTN_INST/COUNTER_reg[11]/C
+    SLICE_X3Y81          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  OK_BTN_INST/COUNTER_reg[11]/Q
+                         net (fo=2, routed)           0.117     0.258    OK_BTN_INST/COUNTER_reg[11]
+    SLICE_X3Y81          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.366 r  OK_BTN_INST/COUNTER_reg[8]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.366    OK_BTN_INST/COUNTER_reg[8]_i_1_n_4
+    SLICE_X3Y81          FDRE                                         r  OK_BTN_INST/COUNTER_reg[11]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 OK_BTN_INST/BUTTON_PRESSED_VAR_reg/C
+  Source:                 RIGHT_BTN_INST/COUNTER_reg[7]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            OK_BTN_INST/BUTTON_PRESSED_VAR_reg/D
+  Destination:            RIGHT_BTN_INST/COUNTER_reg[7]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.366ns  (logic 0.186ns (50.768%)  route 0.180ns (49.232%))
-  Logic Levels:           2  (FDRE=1 LUT5=1)
+  Data Path Delay:        0.366ns  (logic 0.249ns (67.994%)  route 0.117ns (32.006%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X1Y73          FDRE                         0.000     0.000 r  OK_BTN_INST/BUTTON_PRESSED_VAR_reg/C
-    SLICE_X1Y73          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  OK_BTN_INST/BUTTON_PRESSED_VAR_reg/Q
-                         net (fo=4, routed)           0.180     0.321    OK_BTN_INST/BUTTON_PRESSED_VAR
-    SLICE_X1Y73          LUT5 (Prop_lut5_I4_O)        0.045     0.366 r  OK_BTN_INST/BUTTON_PRESSED_VAR_i_1/O
-                         net (fo=1, routed)           0.000     0.366    OK_BTN_INST/BUTTON_PRESSED_VAR_i_1_n_0
-    SLICE_X1Y73          FDRE                                         r  OK_BTN_INST/BUTTON_PRESSED_VAR_reg/D
+    SLICE_X1Y76          FDRE                         0.000     0.000 r  RIGHT_BTN_INST/COUNTER_reg[7]/C
+    SLICE_X1Y76          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  RIGHT_BTN_INST/COUNTER_reg[7]/Q
+                         net (fo=2, routed)           0.117     0.258    RIGHT_BTN_INST/COUNTER_reg[7]
+    SLICE_X1Y76          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.366 r  RIGHT_BTN_INST/COUNTER_reg[4]_i_1__3/O[3]
+                         net (fo=1, routed)           0.000     0.366    RIGHT_BTN_INST/COUNTER_reg[4]_i_1__3_n_4
+    SLICE_X1Y76          FDRE                                         r  RIGHT_BTN_INST/COUNTER_reg[7]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 fsm_inst/selector_inst_attempt/led_code_aux_reg[5][0]/C
+  Source:                 DOWN_BTN_INST/COUNTER_reg[19]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            fsm_inst/selector_inst_attempt/led_code_aux_reg[5][0]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.367ns  (logic 0.186ns (50.716%)  route 0.181ns (49.284%))
-  Logic Levels:           2  (FDRE=1 LUT5=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X5Y89          FDRE                         0.000     0.000 r  fsm_inst/selector_inst_attempt/led_code_aux_reg[5][0]/C
-    SLICE_X5Y89          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  fsm_inst/selector_inst_attempt/led_code_aux_reg[5][0]/Q
-                         net (fo=14, routed)          0.181     0.322    fsm_inst/selector_inst_attempt/led_code_aux_reg[5][0]_0
-    SLICE_X5Y89          LUT5 (Prop_lut5_I0_O)        0.045     0.367 r  fsm_inst/selector_inst_attempt/led_code_aux[5][0]_i_1/O
-                         net (fo=1, routed)           0.000     0.367    fsm_inst/selector_inst_attempt/led_code_aux[5][0]_i_1_n_0
-    SLICE_X5Y89          FDRE                                         r  fsm_inst/selector_inst_attempt/led_code_aux_reg[5][0]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 DISPLAY_MUX_inst/COUNT_reg[16]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            DISPLAY_MUX_inst/COUNT_reg[16]/D
+  Destination:            DOWN_BTN_INST/COUNTER_reg[19]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.367ns  (logic 0.249ns (67.838%)  route 0.118ns (32.162%))
@@ -1079,33 +623,93 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X7Y75          FDRE                         0.000     0.000 r  DISPLAY_MUX_inst/COUNT_reg[16]/C
-    SLICE_X7Y75          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  DISPLAY_MUX_inst/COUNT_reg[16]/Q
-                         net (fo=3, routed)           0.118     0.259    DISPLAY_MUX_inst/COUNT_reg_n_0_[16]
-    SLICE_X7Y75          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.108     0.367 r  DISPLAY_MUX_inst/COUNT0_carry__2/O[3]
-                         net (fo=1, routed)           0.000     0.367    DISPLAY_MUX_inst/COUNT0_carry__2_n_4
-    SLICE_X7Y75          FDRE                                         r  DISPLAY_MUX_inst/COUNT_reg[16]/D
+    SLICE_X5Y83          FDRE                         0.000     0.000 r  DOWN_BTN_INST/COUNTER_reg[19]/C
+    SLICE_X5Y83          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  DOWN_BTN_INST/COUNTER_reg[19]/Q
+                         net (fo=2, routed)           0.118     0.259    DOWN_BTN_INST/COUNTER_reg[19]
+    SLICE_X5Y83          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.367 r  DOWN_BTN_INST/COUNTER_reg[16]_i_1__1/O[3]
+                         net (fo=1, routed)           0.000     0.367    DOWN_BTN_INST/COUNTER_reg[16]_i_1__1_n_4
+    SLICE_X5Y83          FDRE                                         r  DOWN_BTN_INST/COUNTER_reg[19]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 Blinker_inst/COUNT_reg[24]/C
+  Source:                 DISPLAY_MUX_inst/COUNT_reg[8]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            Blinker_inst/COUNT_reg[24]/D
+  Destination:            DISPLAY_MUX_inst/COUNT_reg[8]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.367ns  (logic 0.249ns (67.829%)  route 0.118ns (32.171%))
+  Data Path Delay:        0.368ns  (logic 0.249ns (67.612%)  route 0.119ns (32.388%))
   Logic Levels:           2  (CARRY4=1 FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X9Y76          FDRE                         0.000     0.000 r  Blinker_inst/COUNT_reg[24]/C
-    SLICE_X9Y76          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Blinker_inst/COUNT_reg[24]/Q
-                         net (fo=2, routed)           0.118     0.259    Blinker_inst/COUNT[24]
-    SLICE_X9Y76          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.108     0.367 r  Blinker_inst/COUNT0_carry__4/O[3]
-                         net (fo=1, routed)           0.000     0.367    Blinker_inst/p_1_in[24]
-    SLICE_X9Y76          FDRE                                         r  Blinker_inst/COUNT_reg[24]/D
+    SLICE_X1Y82          FDRE                         0.000     0.000 r  DISPLAY_MUX_inst/COUNT_reg[8]/C
+    SLICE_X1Y82          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  DISPLAY_MUX_inst/COUNT_reg[8]/Q
+                         net (fo=2, routed)           0.119     0.260    DISPLAY_MUX_inst/COUNT_reg_n_0_[8]
+    SLICE_X1Y82          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.368 r  DISPLAY_MUX_inst/COUNT0_carry__0/O[3]
+                         net (fo=1, routed)           0.000     0.368    DISPLAY_MUX_inst/COUNT0_carry__0_n_4
+    SLICE_X1Y82          FDRE                                         r  DISPLAY_MUX_inst/COUNT_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 OK_BTN_INST/COUNTER_reg[15]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            OK_BTN_INST/COUNTER_reg[15]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.368ns  (logic 0.249ns (67.612%)  route 0.119ns (32.388%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y82          FDRE                         0.000     0.000 r  OK_BTN_INST/COUNTER_reg[15]/C
+    SLICE_X3Y82          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  OK_BTN_INST/COUNTER_reg[15]/Q
+                         net (fo=2, routed)           0.119     0.260    OK_BTN_INST/COUNTER_reg[15]
+    SLICE_X3Y82          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.368 r  OK_BTN_INST/COUNTER_reg[12]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.368    OK_BTN_INST/COUNTER_reg[12]_i_1_n_4
+    SLICE_X3Y82          FDRE                                         r  OK_BTN_INST/COUNTER_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 OK_BTN_INST/COUNTER_reg[19]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            OK_BTN_INST/COUNTER_reg[19]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.368ns  (logic 0.249ns (67.612%)  route 0.119ns (32.388%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y83          FDRE                         0.000     0.000 r  OK_BTN_INST/COUNTER_reg[19]/C
+    SLICE_X3Y83          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  OK_BTN_INST/COUNTER_reg[19]/Q
+                         net (fo=2, routed)           0.119     0.260    OK_BTN_INST/COUNTER_reg[19]
+    SLICE_X3Y83          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.368 r  OK_BTN_INST/COUNTER_reg[16]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.368    OK_BTN_INST/COUNTER_reg[16]_i_1_n_4
+    SLICE_X3Y83          FDRE                                         r  OK_BTN_INST/COUNTER_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 OK_BTN_INST/COUNTER_reg[7]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            OK_BTN_INST/COUNTER_reg[7]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.368ns  (logic 0.249ns (67.612%)  route 0.119ns (32.388%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y80          FDRE                         0.000     0.000 r  OK_BTN_INST/COUNTER_reg[7]/C
+    SLICE_X3Y80          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  OK_BTN_INST/COUNTER_reg[7]/Q
+                         net (fo=2, routed)           0.119     0.260    OK_BTN_INST/COUNTER_reg[7]
+    SLICE_X3Y80          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.368 r  OK_BTN_INST/COUNTER_reg[4]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.368    OK_BTN_INST/COUNTER_reg[4]_i_1_n_4
+    SLICE_X3Y80          FDRE                                         r  OK_BTN_INST/COUNTER_reg[7]/D
   -------------------------------------------------------------------    -------------------
 
 

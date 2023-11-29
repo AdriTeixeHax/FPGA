@@ -1,37 +1,18 @@
 #-----------------------------------------------------------
-# Vivado v2023.1 (64-bit)
-# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
-# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
-# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Nov 15 22:28:14 2023
-# Process ID: 29324
-# Current directory: C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28256 C:\Users\bogurad\Desktop\Proyectos gitHub\FPGA\passwordNator\passwordNator.xpr
-# Log file: C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/vivado.log
-# Journal file: C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator\vivado.jou
-# Running On: DESKTOP-MOPDCTP, OS: Windows, CPU Frequency: 3800 MHz, CPU Physical cores: 16, Host memory: 34240 MB
+# Vivado v2023.1.1 (64-bit)
+# SW Build 3900603 on Fri Jun 16 19:31:24 MDT 2023
+# IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
+# SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
+# Start of session at: Wed Nov 29 15:40:08 2023
+# Process ID: 16288
+# Current directory: C:/Users/adria/Documents/GitHub/FPGA/passwordNator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23956 C:\Users\adria\Documents\GitHub\FPGA\passwordNator\passwordNator.xpr
+# Log file: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/vivado.log
+# Journal file: C:/Users/adria/Documents/GitHub/FPGA/passwordNator\vivado.jou
+# Running On: LAPTOP-1917, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 8, Host memory: 32078 MB
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.xpr}
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-50:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/arty-s7-50/B.0/board.xml as part xc7s50csga324-1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-z7-10:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/arty-z7-10/A.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-z7-20:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/arty-z7-20/A.0/board.xml as part xc7z020clg400-1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cmod-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/cmod-s7-25/B.0/board.xml as part xc7s25csga225-1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cora-z7-07s:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/cora-z7-07s/B.0/board.xml as part xc7z007sclg400-1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cora-z7-10:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/cora-z7-10/B.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:eclypse-z7:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/eclypse-z7/A.0/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:eclypse-z7:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/eclypse-z7/B.0/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:gzu_3eg:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/genesys-zu-3eg/B.0/board.xml as part xczu3eg-sfvc784-1-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:gzu_3eg:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/genesys-zu-3eg/D.0/board.xml as part xczu3eg-sfvc784-1-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:gzu_5ev:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/genesys-zu-5ev/C.0/board.xml as part xczu5ev-sfvc784-1-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zedboard:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zedboard/1.3/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo-z7-10:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zybo-z7-10/A.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo-z7-20:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zybo-z7-20/A.0/board.xml as part xc7z020clg400-1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zybo/B.3/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zybo/B.4/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+open_project C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.xpr
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
@@ -101,14 +82,201 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.gen/sources_1'.
-WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.ip_user_files'.
+INFO: [Project 1-313] Project file moved from 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator' since last save.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.gen/sources_1'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
-open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1569.230 ; gain = 283.750
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1472.516 ; gain = 328.977
 update_compile_order -fileset sources_1
-exit
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 15 22:28:52 2023...
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/top.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov 29 15:41:26 2023] Launched synth_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/runme.log
+[Wed Nov 29 15:41:26 2023] Launched impl_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1849.770 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 299 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.336 . Memory (MB): peak = 2476.141 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.336 . Memory (MB): peak = 2476.141 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2476.141 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2594.207 ; gain = 1090.945
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+ECHO is off.
+ECHO is off.
+
+****** Xilinx hw_server v2023.1.1
+  **** Build date : Jun 16 2023 at 19:52:37
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+ECHO is off.
+ECHO is off.
+
+
+******** Xilinx cs_server v2023.1.0
+  ****** Build date   : May 31 2023-19:31:41
+    **** Build number : 2023.1.1685557901
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2639.246 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AE3A68A
+set_property PROGRAM.FILE {C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov 29 15:50:54 2023] Launched impl_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/top.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov 29 15:55:02 2023] Launched synth_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/runme.log
+[Wed Nov 29 15:55:03 2023] Launched impl_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/top.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov 29 16:03:30 2023] Launched synth_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/runme.log
+[Wed Nov 29 16:03:30 2023] Launched impl_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/runme.log
+reset_run impl_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/top.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov 29 16:06:05 2023] Launched synth_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/runme.log
+[Wed Nov 29 16:06:05 2023] Launched impl_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/top.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov 29 16:17:32 2023] Launched synth_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/runme.log
+[Wed Nov 29 16:17:32 2023] Launched impl_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/top.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov 29 16:26:12 2023] Launched synth_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/runme.log
+[Wed Nov 29 16:26:12 2023] Launched impl_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/top.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov 29 16:31:04 2023] Launched synth_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/runme.log
+[Wed Nov 29 16:31:04 2023] Launched impl_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/top.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov 29 16:43:40 2023] Launched synth_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/runme.log
+[Wed Nov 29 16:43:41 2023] Launched impl_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/top.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov 29 16:59:39 2023] Launched synth_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1/runme.log
+[Wed Nov 29 16:59:39 2023] Launched impl_1...
+Run output will be captured here: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.

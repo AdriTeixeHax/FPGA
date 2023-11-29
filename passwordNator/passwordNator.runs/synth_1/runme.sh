@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.runs/synth_1'
+HD_PWD='C:/Users/adria/Documents/GitHub/FPGA/passwordNator/passwordNator.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

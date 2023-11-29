@@ -108,7 +108,6 @@ selector_inst_attempt:  selector
     generic map(
         num_displays=>num_displays,
         led_code_size=>led_code_size
-    
     )
     port map(
         reset=>reset_attempt,
@@ -133,7 +132,7 @@ selector_inst_attempt:  selector
     end process;
 
     nextstate_decod: process (OK_B, current_state)
-
+    variable success_pass: std_logic := '0';
     begin
         next_state <= current_state;
 
@@ -156,18 +155,30 @@ selector_inst_attempt:  selector
             end if;
         when attemp => 
             if OK_B = '1' then 
-                if password = guess then
+            
+                success_pass := '0'; 
+            
+                for i in 0 to num_displays - 1 loop
+                    if led_code_out_password(i) /= led_code_out_attempt(i) then
+                        success_pass := '1';
+                        exit;
+                    end if;
+                end loop;
+                
+                if success_pass = '0' then
                     next_state <= success;
                 else
-                     next_state <= fail;
+                    next_state <= fail;
                 end if;
             end if;
         when success => 
             if OK_B = '1' then 
-                next_state <= attemp;
+                next_state <= start;
             end if;
         when others => --Estado de fail
-            next_state <= attemp;
+            if OK_B = '1' then 
+                next_state <= attemp;
+            end if;
         end case;
     end process;
 

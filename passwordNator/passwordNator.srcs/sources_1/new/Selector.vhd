@@ -42,8 +42,8 @@ begin
         variable display_aux:  natural range num_displays - 1 downto 0;
         variable natural_code: Natural  range  0 to 99999999;
     begin
-        if (reset = '0') then
-            for i in 0 to led_code_size - 1 loop
+        if (reset = '1') then
+            for i in 0 to num_displays - 1 loop
                 led_code_aux(i) := 0;
             end loop;
 
@@ -66,14 +66,14 @@ begin
                     end if;                
                     
                     
-                elsif (right = '1') then
+                elsif (left = '1') then
                     if(display_aux /= num_displays - 1)  then 
                         display_aux := display_aux + 1;
                     else
                         display_aux :=  0;
                     end if;
                     
-                elsif (left = '1') then
+                elsif (right = '1') then
                     if(display_aux/=0)  then 
                         display_aux := display_aux - 1;
                     else
@@ -84,8 +84,8 @@ begin
         end if;
 
         for i in 0 to NUM_DISPLAYS - 1 loop
-             led_code_out(i)<= conv_std_logic_vector(led_code_aux(i), 5);
-            natural_code    :=  natural_code+led_code_aux(i)*10**i;
+            led_code_out(i)<= std_logic_vector(to_unsigned(led_code_aux(i), 5));
+            natural_code :=  natural_code+led_code_aux(i)*10**i;
         end loop;
         
         display_selected <= (others => '0');
