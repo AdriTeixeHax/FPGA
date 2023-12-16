@@ -19,7 +19,6 @@ entity top is
         RESET: in std_logic;
         s7: out std_logic_vector (6 downto 0);
         DOT: out std_logic;
-        temporal_delete_after_use: in std_logic_vector (LED_CODE_SIZE - 1 downto 0);
         t7: out std_logic_vector (NUM_DISPLAYS - 1 downto 0)
     );
 end top;

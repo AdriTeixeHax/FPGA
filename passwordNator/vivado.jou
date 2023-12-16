@@ -1,14 +1,24 @@
 #-----------------------------------------------------------
-# Vivado v2023.1.1 (64-bit)
-# SW Build 3900603 on Fri Jun 16 19:31:24 MDT 2023
-# IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
-# SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
-# Start of session at: Fri Dec  8 23:24:29 2023
-# Process ID: 15284
-# Current directory: C:/Users/adria/Documents/GitHub/FPGA/passwordNator
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent276 C:\Users\adria\Documents\GitHub\FPGA\passwordNator\passwordNator.xpr
-# Log file: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/vivado.log
-# Journal file: C:/Users/adria/Documents/GitHub/FPGA/passwordNator\vivado.jou
-# Running On: LAPTOP-1917, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 8, Host memory: 32078 MB
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sat Dec 16 19:06:26 2023
+# Process ID: 23932
+# Current directory: C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26216 C:\Users\bogurad\Desktop\Proyectos gitHub\FPGA\passwordNator\passwordNator.xpr
+# Log file: C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/vivado.log
+# Journal file: C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator\vivado.jou
+# Running On: DESKTOP-MOPDCTP, OS: Windows, CPU Frequency: 3800 MHz, CPU Physical cores: 16, Host memory: 34240 MB
 #-----------------------------------------------------------
 start_gui
+open_project {C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.xpr}
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -dataflow -name dfv_1
+close_design
+open_run synth_1 -name synth_1
+close_design
+open_run impl_1
+current_design rtl_1
+refresh_design

@@ -1,14 +1,666 @@
 #-----------------------------------------------------------
-# Vivado v2023.1.1 (64-bit)
-# SW Build 3900603 on Fri Jun 16 19:31:24 MDT 2023
-# IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
-# SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
-# Start of session at: Fri Dec  8 23:24:29 2023
-# Process ID: 15284
-# Current directory: C:/Users/adria/Documents/GitHub/FPGA/passwordNator
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent276 C:\Users\adria\Documents\GitHub\FPGA\passwordNator\passwordNator.xpr
-# Log file: C:/Users/adria/Documents/GitHub/FPGA/passwordNator/vivado.log
-# Journal file: C:/Users/adria/Documents/GitHub/FPGA/passwordNator\vivado.jou
-# Running On: LAPTOP-1917, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 8, Host memory: 32078 MB
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sat Dec 16 19:06:26 2023
+# Process ID: 23932
+# Current directory: C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26216 C:\Users\bogurad\Desktop\Proyectos gitHub\FPGA\passwordNator\passwordNator.xpr
+# Log file: C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/vivado.log
+# Journal file: C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator\vivado.jou
+# Running On: DESKTOP-MOPDCTP, OS: Windows, CPU Frequency: 3800 MHz, CPU Physical cores: 16, Host memory: 34240 MB
 #-----------------------------------------------------------
 start_gui
+open_project {C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.xpr}
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-50:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/arty-s7-50/B.0/board.xml as part xc7s50csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-z7-10:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/arty-z7-10/A.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-z7-20:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/arty-z7-20/A.0/board.xml as part xc7z020clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cmod-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/cmod-s7-25/B.0/board.xml as part xc7s25csga225-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cora-z7-07s:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/cora-z7-07s/B.0/board.xml as part xc7z007sclg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cora-z7-10:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/cora-z7-10/B.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:eclypse-z7:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/eclypse-z7/A.0/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:eclypse-z7:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/eclypse-z7/B.0/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:gzu_3eg:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/genesys-zu-3eg/B.0/board.xml as part xczu3eg-sfvc784-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:gzu_3eg:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/genesys-zu-3eg/D.0/board.xml as part xczu3eg-sfvc784-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:gzu_5ev:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/genesys-zu-5ev/C.0/board.xml as part xczu5ev-sfvc784-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zedboard:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zedboard/1.3/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo-z7-10:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zybo-z7-10/A.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo-z7-20:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zybo-z7-20/A.0/board.xml as part xc7z020clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zybo/B.3/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zybo/B.4/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.3/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc702/1.4/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.5/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.6/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [Project 1-313] Project file moved from 'C:/Users/adria/Documents/GitHub/FPGA/passwordNator' since last save.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.gen/sources_1'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.ip_user_files'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1583.102 ; gain = 388.641
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: top
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2344.375 ; gain = 394.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:27]
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'the_machine_of_the_state' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:26' bound to instance 'fsm_inst' of component 'the_machine_of_the_state' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:113]
+INFO: [Synth 8-638] synthesizing module 'the_machine_of_the_state' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:45]
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+	Parameter led_code_size bound to: 5 - type: integer 
+	Parameter num_displays bound to: 8 - type: integer 
+	Parameter led_code_size bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'selector' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Selector.vhd:16' bound to instance 'selector_inst_password' of component 'selector' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'selector' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Selector.vhd:37]
+	Parameter num_displays bound to: 8 - type: integer 
+	Parameter led_code_size bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'selector' (0#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Selector.vhd:37]
+	Parameter num_displays bound to: 8 - type: integer 
+	Parameter led_code_size bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'selector' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Selector.vhd:16' bound to instance 'selector_inst_attempt' of component 'selector' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:107]
+WARNING: [Synth 8-614] signal 'led_code_out_password' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:134]
+WARNING: [Synth 8-614] signal 'led_code_out_attempt' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:134]
+WARNING: [Synth 8-614] signal 'led_code_out_password' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:185]
+WARNING: [Synth 8-614] signal 'display_selected_password' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:185]
+WARNING: [Synth 8-614] signal 'led_code_out_attempt' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:185]
+WARNING: [Synth 8-614] signal 'display_selected_attempt' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:185]
+INFO: [Synth 8-256] done synthesizing module 'the_machine_of_the_state' (0#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:45]
+INFO: [Synth 8-3491] module 'Decoder7' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd:29' bound to instance 'Deocoder7_inst' of component 'Decoder7' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'Decoder7' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'Decoder7' (0#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd:38]
+	Parameter BLINK_CLK_DIVIDER bound to: 50000000 - type: integer 
+	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'BLINKER' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd:4' bound to instance 'Blinker_inst' of component 'BLINKER' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:137]
+INFO: [Synth 8-638] synthesizing module 'BLINKER' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd:20]
+	Parameter BLINK_CLK_DIVIDER bound to: 50000000 - type: integer 
+	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'BLINKER' (0#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd:20]
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
+	Parameter DISPLAY_CHANGE_CLK_DIVIDER bound to: 100000 - type: integer 
+INFO: [Synth 8-3491] module 'DISPLAY_MUX' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd:15' bound to instance 'DISPLAY_MUX_inst' of component 'DISPLAY_MUX' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:151]
+INFO: [Synth 8-638] synthesizing module 'DISPLAY_MUX' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd:31]
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
+	Parameter DISPLAY_CHANGE_CLK_DIVIDER bound to: 100000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'DISPLAY_MUX' (0#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd:31]
+	Parameter num_displays bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'Transistor_mux' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd:26' bound to instance 'Transistor_mux_inst' of component 'Transistor_mux' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'Transistor_mux' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd:36]
+	Parameter num_displays bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Transistor_mux' (0#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd:36]
+INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:49' bound to instance 'OK_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:174]
+INFO: [Synth 8-638] synthesizing module 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'SYNC_BUTTON' (0#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:60]
+INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:49' bound to instance 'UP_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:181]
+INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:49' bound to instance 'DOWN_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:188]
+INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:49' bound to instance 'LEFT_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:195]
+INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:49' bound to instance 'RIGHT_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:202]
+INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:27]
+WARNING: [Synth 8-3917] design top has port DOT driven by constant 1
+WARNING: [Synth 8-7129] Port temporal_delete_after_use[4] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port temporal_delete_after_use[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port temporal_delete_after_use[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port temporal_delete_after_use[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port temporal_delete_after_use[0] in module top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2439.562 ; gain = 489.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2439.562 ; gain = 489.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2439.562 ; gain = 489.664
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2439.562 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2528.988 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2601.934 ; gain = 652.035
+31 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 2601.934 ; gain = 1015.875
+synth_design -dataflow -name dfv_1
+Command: synth_design -dataflow -name dfv_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: top
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2671.598 ; gain = 58.289
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:27]
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'the_machine_of_the_state' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:26' bound to instance 'fsm_inst' of component 'the_machine_of_the_state' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:113]
+INFO: [Synth 8-638] synthesizing module 'the_machine_of_the_state' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:45]
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+	Parameter led_code_size bound to: 5 - type: integer 
+	Parameter num_displays bound to: 8 - type: integer 
+	Parameter led_code_size bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'selector' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Selector.vhd:16' bound to instance 'selector_inst_password' of component 'selector' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'selector' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Selector.vhd:37]
+	Parameter num_displays bound to: 8 - type: integer 
+	Parameter led_code_size bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'selector' (0#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Selector.vhd:37]
+	Parameter num_displays bound to: 8 - type: integer 
+	Parameter led_code_size bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'selector' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Selector.vhd:16' bound to instance 'selector_inst_attempt' of component 'selector' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:107]
+WARNING: [Synth 8-614] signal 'led_code_out_password' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:134]
+WARNING: [Synth 8-614] signal 'led_code_out_attempt' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:134]
+WARNING: [Synth 8-614] signal 'led_code_out_password' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:185]
+WARNING: [Synth 8-614] signal 'display_selected_password' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:185]
+WARNING: [Synth 8-614] signal 'led_code_out_attempt' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:185]
+WARNING: [Synth 8-614] signal 'display_selected_attempt' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:185]
+INFO: [Synth 8-256] done synthesizing module 'the_machine_of_the_state' (0#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:45]
+INFO: [Synth 8-3491] module 'Decoder7' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd:29' bound to instance 'Deocoder7_inst' of component 'Decoder7' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'Decoder7' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'Decoder7' (0#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd:38]
+	Parameter BLINK_CLK_DIVIDER bound to: 50000000 - type: integer 
+	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'BLINKER' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd:4' bound to instance 'Blinker_inst' of component 'BLINKER' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:137]
+INFO: [Synth 8-638] synthesizing module 'BLINKER' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd:20]
+	Parameter BLINK_CLK_DIVIDER bound to: 50000000 - type: integer 
+	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'BLINKER' (0#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd:20]
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
+	Parameter DISPLAY_CHANGE_CLK_DIVIDER bound to: 100000 - type: integer 
+INFO: [Synth 8-3491] module 'DISPLAY_MUX' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd:15' bound to instance 'DISPLAY_MUX_inst' of component 'DISPLAY_MUX' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:151]
+INFO: [Synth 8-638] synthesizing module 'DISPLAY_MUX' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd:31]
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
+	Parameter DISPLAY_CHANGE_CLK_DIVIDER bound to: 100000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'DISPLAY_MUX' (0#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd:31]
+	Parameter num_displays bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'Transistor_mux' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd:26' bound to instance 'Transistor_mux_inst' of component 'Transistor_mux' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'Transistor_mux' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd:36]
+	Parameter num_displays bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Transistor_mux' (0#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd:36]
+INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:49' bound to instance 'OK_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:174]
+INFO: [Synth 8-638] synthesizing module 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'SYNC_BUTTON' (0#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:60]
+INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:49' bound to instance 'UP_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:181]
+INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:49' bound to instance 'DOWN_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:188]
+INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:49' bound to instance 'LEFT_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:195]
+INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:49' bound to instance 'RIGHT_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:202]
+
+Could not find Selected Down Pin for node 
+INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:27]
+WARNING: [Synth 8-3330] design top has an empty top module
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2780.816 ; gain = 167.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2780.816 ; gain = 167.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2780.816 ; gain = 167.508
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2780.816 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2780.816 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2780.816 ; gain = 167.508
+INFO: [Common 17-83] Releasing license: Synthesis
+32 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2780.816 ; gain = 167.508
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2814.781 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 139 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2814.781 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+close_design
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 3196.254 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 139 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Constraints 18-5435] Cannot read file, the software version for the checkpoint (2023.1.1.3900603) does not match the current software version (2023.1.3865809).
+  File : C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.runs/impl_1/top_routed/top.xbdc.
+Parsing XDC File [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.runs/impl_1/top_routed/top.xdc]
+Finished Parsing XDC File [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.runs/impl_1/top_routed/top.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.086 . Memory (MB): peak = 3196.254 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.086 . Memory (MB): peak = 3196.254 ; gain = 0.000
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3196.254 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Power 33-325] Unable to locate signal 'DISPLAY_MUX_inst/DISPLAY_IN_USE_reg[2]_1' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/sel0__2[1]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[2]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][24]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][4]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][14]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/display_aux_reg[0]_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/sel0__1[1]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][20]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[17]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][25]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][22]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][13]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[18]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[7]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][23]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[7][12]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[20]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][28]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[13]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][2]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][8]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][7]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][3]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][15]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[6]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/display_aux_reg[2]_0[0]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/sel0__1[2]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[15]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/natural_out0__79_carry__3_i_3__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[29]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[9]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[11]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[10]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[7][7]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[12]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[7][14]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][16]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux_reg[5][3]_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[5]_7[30]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[16]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[3]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][5]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[19]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][11]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[8]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[5]_7[13]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[22]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[31]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][18]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[7][11]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[4]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][12]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[7][28]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][31]_i_2__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[5]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[23]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[28]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[5]_7[15]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[5]_7[9]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[5]_7[24]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[5]_7[2]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[26]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][17]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][1]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[27]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[21]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/natural_out0__222_carry__3_i_3_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][29]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[5]_7[11]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/guess[25]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[5]_7[28]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][19]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/natural_out0__79_carry__2_i_3__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/natural_out0__222_carry__2_i_3_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[1]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[7][8]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[7][30]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[14]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[5]_7[18]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][26]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][6]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[24]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/natural_out0__222_carry__5_i_1_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/natural_out0__222_carry__4_i_3_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/natural_out0__0_carry__4_i_3__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[5]_7[17]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[0]1_in[30]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/guess[11]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/guess[19]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[4][21]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/guess[14]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[7][20]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[5]_7[8]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[7][2]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[7][4]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_password/led_code_aux[7][25]_i_1__0_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/guess[23]' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/natural_out0__222_carry__1_i_3_n_0' in design.
+WARNING: [Power 33-325] Unable to locate signal 'fsm_inst/selector_inst_attempt/led_code_aux[5]_7[10]' in design.
+INFO: [Common 17-14] Message 'Power 33-325' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Timing 38-311] Unable to locate pin 'DOWN_BTN_INST/COUNTER_reg[20]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'DOWN_BTN_INST/COUNTER_reg[21]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'DOWN_BTN_INST/COUNTER_reg[22]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'DOWN_BTN_INST/COUNTER_reg[23]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'LEFT_BTN_INST/COUNTER_reg[20]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'LEFT_BTN_INST/COUNTER_reg[21]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'LEFT_BTN_INST/COUNTER_reg[22]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'LEFT_BTN_INST/COUNTER_reg[23]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'OK_BTN_INST/COUNTER_reg[20]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'OK_BTN_INST/COUNTER_reg[21]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'OK_BTN_INST/COUNTER_reg[22]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'OK_BTN_INST/COUNTER_reg[23]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'RIGHT_BTN_INST/COUNTER_reg[20]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'RIGHT_BTN_INST/COUNTER_reg[21]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'RIGHT_BTN_INST/COUNTER_reg[22]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'RIGHT_BTN_INST/COUNTER_reg[23]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'UP_BTN_INST/COUNTER_reg[20]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'UP_BTN_INST/COUNTER_reg[21]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'UP_BTN_INST/COUNTER_reg[22]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'UP_BTN_INST/COUNTER_reg[23]/C' in design
+WARNING: [Timing 38-311] Unable to locate pin 'DOWN_BTN_INST/COUNTER_reg[20]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'DOWN_BTN_INST/COUNTER_reg[20]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'DOWN_BTN_INST/COUNTER_reg[20]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'DOWN_BTN_INST/COUNTER_reg[21]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'DOWN_BTN_INST/COUNTER_reg[21]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'DOWN_BTN_INST/COUNTER_reg[21]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'DOWN_BTN_INST/COUNTER_reg[22]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'DOWN_BTN_INST/COUNTER_reg[22]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'DOWN_BTN_INST/COUNTER_reg[22]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'DOWN_BTN_INST/COUNTER_reg[23]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'DOWN_BTN_INST/COUNTER_reg[23]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'DOWN_BTN_INST/COUNTER_reg[23]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'LEFT_BTN_INST/COUNTER_reg[20]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'LEFT_BTN_INST/COUNTER_reg[20]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'LEFT_BTN_INST/COUNTER_reg[20]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'LEFT_BTN_INST/COUNTER_reg[21]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'LEFT_BTN_INST/COUNTER_reg[21]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'LEFT_BTN_INST/COUNTER_reg[21]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'LEFT_BTN_INST/COUNTER_reg[22]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'LEFT_BTN_INST/COUNTER_reg[22]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'LEFT_BTN_INST/COUNTER_reg[22]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'LEFT_BTN_INST/COUNTER_reg[23]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'LEFT_BTN_INST/COUNTER_reg[23]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'LEFT_BTN_INST/COUNTER_reg[23]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'OK_BTN_INST/COUNTER_reg[20]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'OK_BTN_INST/COUNTER_reg[20]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'OK_BTN_INST/COUNTER_reg[20]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'OK_BTN_INST/COUNTER_reg[21]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'OK_BTN_INST/COUNTER_reg[21]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'OK_BTN_INST/COUNTER_reg[21]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'OK_BTN_INST/COUNTER_reg[22]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'OK_BTN_INST/COUNTER_reg[22]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'OK_BTN_INST/COUNTER_reg[22]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'OK_BTN_INST/COUNTER_reg[23]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'OK_BTN_INST/COUNTER_reg[23]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'OK_BTN_INST/COUNTER_reg[23]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'RIGHT_BTN_INST/COUNTER_reg[20]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'RIGHT_BTN_INST/COUNTER_reg[20]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'RIGHT_BTN_INST/COUNTER_reg[20]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'RIGHT_BTN_INST/COUNTER_reg[21]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'RIGHT_BTN_INST/COUNTER_reg[21]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'RIGHT_BTN_INST/COUNTER_reg[21]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'RIGHT_BTN_INST/COUNTER_reg[22]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'RIGHT_BTN_INST/COUNTER_reg[22]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'RIGHT_BTN_INST/COUNTER_reg[22]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'RIGHT_BTN_INST/COUNTER_reg[23]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'RIGHT_BTN_INST/COUNTER_reg[23]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'RIGHT_BTN_INST/COUNTER_reg[23]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'UP_BTN_INST/COUNTER_reg[20]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'UP_BTN_INST/COUNTER_reg[20]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'UP_BTN_INST/COUNTER_reg[20]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'UP_BTN_INST/COUNTER_reg[21]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'UP_BTN_INST/COUNTER_reg[21]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'UP_BTN_INST/COUNTER_reg[21]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'UP_BTN_INST/COUNTER_reg[22]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'UP_BTN_INST/COUNTER_reg[22]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'UP_BTN_INST/COUNTER_reg[22]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'UP_BTN_INST/COUNTER_reg[23]/CE' in design
+WARNING: [Timing 38-311] Unable to locate pin 'UP_BTN_INST/COUNTER_reg[23]/D' in design
+WARNING: [Timing 38-311] Unable to locate pin 'UP_BTN_INST/COUNTER_reg[23]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][10]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][11]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][12]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][13]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][14]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][15]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][16]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][17]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][18]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][19]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][1]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][20]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][21]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][22]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][23]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][24]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][25]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][26]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][27]/R' in design
+WARNING: [Timing 38-311] Unable to locate pin 'fsm_inst/selector_inst_attempt/led_code_aux_reg[5][28]/R' in design
+INFO: [Common 17-14] Message 'Timing 38-311' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+current_design rtl_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3357.398 ; gain = 123.281
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:26]
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'the_machine_of_the_state' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:26' bound to instance 'fsm_inst' of component 'the_machine_of_the_state' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'the_machine_of_the_state' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:45]
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+	Parameter led_code_size bound to: 5 - type: integer 
+	Parameter num_displays bound to: 8 - type: integer 
+	Parameter led_code_size bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'selector' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Selector.vhd:16' bound to instance 'selector_inst_password' of component 'selector' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'selector' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Selector.vhd:37]
+	Parameter num_displays bound to: 8 - type: integer 
+	Parameter led_code_size bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'selector' (1#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Selector.vhd:37]
+	Parameter num_displays bound to: 8 - type: integer 
+	Parameter led_code_size bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'selector' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Selector.vhd:16' bound to instance 'selector_inst_attempt' of component 'selector' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:107]
+WARNING: [Synth 8-614] signal 'led_code_out_password' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:134]
+WARNING: [Synth 8-614] signal 'led_code_out_attempt' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:134]
+WARNING: [Synth 8-614] signal 'led_code_out_password' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:185]
+WARNING: [Synth 8-614] signal 'display_selected_password' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:185]
+WARNING: [Synth 8-614] signal 'led_code_out_attempt' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:185]
+WARNING: [Synth 8-614] signal 'display_selected_attempt' is read in the process but is not in the sensitivity list [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:185]
+INFO: [Synth 8-256] done synthesizing module 'the_machine_of_the_state' (2#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/the_machine_of_the_state.vhd:45]
+INFO: [Synth 8-3491] module 'Decoder7' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd:29' bound to instance 'Deocoder7_inst' of component 'Decoder7' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:130]
+INFO: [Synth 8-638] synthesizing module 'Decoder7' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'Decoder7' (3#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Decoder7.vhd:38]
+	Parameter BLINK_CLK_DIVIDER bound to: 50000000 - type: integer 
+	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'BLINKER' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd:4' bound to instance 'Blinker_inst' of component 'BLINKER' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:136]
+INFO: [Synth 8-638] synthesizing module 'BLINKER' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd:20]
+	Parameter BLINK_CLK_DIVIDER bound to: 50000000 - type: integer 
+	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'BLINKER' (4#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Blinker.vhd:20]
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
+	Parameter DISPLAY_CHANGE_CLK_DIVIDER bound to: 100000 - type: integer 
+INFO: [Synth 8-3491] module 'DISPLAY_MUX' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd:15' bound to instance 'DISPLAY_MUX_inst' of component 'DISPLAY_MUX' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'DISPLAY_MUX' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd:31]
+	Parameter NUM_DISPLAYS bound to: 8 - type: integer 
+	Parameter LED_CODE_SIZE bound to: 5 - type: integer 
+	Parameter DISPLAY_CHANGE_CLK_DIVIDER bound to: 100000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'DISPLAY_MUX' (5#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/DisplayMux.vhd:31]
+	Parameter num_displays bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'Transistor_mux' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd:26' bound to instance 'Transistor_mux_inst' of component 'Transistor_mux' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:164]
+INFO: [Synth 8-638] synthesizing module 'Transistor_mux' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd:36]
+	Parameter num_displays bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Transistor_mux' (6#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/Transistor_mux.vhd:36]
+INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:49' bound to instance 'OK_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:173]
+INFO: [Synth 8-638] synthesizing module 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'SYNC_BUTTON' (7#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:60]
+INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:49' bound to instance 'UP_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:180]
+INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:49' bound to instance 'DOWN_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:187]
+INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:49' bound to instance 'LEFT_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:194]
+INFO: [Synth 8-3491] module 'SYNC_BUTTON' declared at 'C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/SYNC_BTN.vhd:49' bound to instance 'RIGHT_BTN_INST' of component 'SYNC_BUTTON' [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:201]
+INFO: [Synth 8-256] done synthesizing module 'top' (8#1) [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/sources_1/new/top.vhd:26]
+WARNING: [Synth 8-3917] design top has port DOT driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3436.043 ; gain = 201.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3453.977 ; gain = 219.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3453.977 ; gain = 219.859
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 3480.805 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'temporal_delete_after_use[4]'. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:271]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:271]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'temporal_delete_after_use[3]'. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:272]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:272]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'temporal_delete_after_use[2]'. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:273]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:273]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'temporal_delete_after_use[1]'. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:274]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:274]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'temporal_delete_after_use[0]'. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:275]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:275]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'temporal_delete_after_use[4]'. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:290]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:290]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'temporal_delete_after_use[3]'. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:291]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:291]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'temporal_delete_after_use[2]'. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:292]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:292]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'temporal_delete_after_use[1]'. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:293]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:293]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'temporal_delete_after_use[0]'. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:294]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc:294]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/bogurad/Desktop/Proyectos gitHub/FPGA/passwordNator/passwordNator.srcs/constrs_1/imports/passwordNator/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3480.805 ; gain = 246.688
