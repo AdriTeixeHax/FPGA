@@ -32,8 +32,8 @@ architecture BEHAVOURAL of DISPLAY_MUX is
 
 begin
     process (CLK)
-    variable COUNT: natural range 0 to DISPLAY_CHANGE_CLK_DIVIDER := 0;
-    variable DISPLAY_IN_USE_VAR: natural range 0 to NUM_DISPLAYS := 0;
+        variable COUNT: natural range 0 to DISPLAY_CHANGE_CLK_DIVIDER := 0;
+        variable DISPLAY_IN_USE_VAR: natural range 0 to NUM_DISPLAYS := 0;
     begin
         if rising_edge(CLK) then
             if COUNT = DISPLAY_CHANGE_CLK_DIVIDER then
